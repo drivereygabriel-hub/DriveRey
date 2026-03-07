@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sobre Nosotros | DriveRey</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+header{
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+padding:12px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
+}
+
+nav{
+width:100%;
+max-width:1200px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* LOGO AREA */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:45px;
+height:45px;
+border-radius:50%;
+box-shadow:0 0 12px rgba(96,165,250,0.8);
+}
+
+.logo-area h1{
+margin:0;
+font-size:22px;
+font-weight:bold;
+color:#60a5fa;
+}
+
+/* MENU */
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+position:relative;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#60a5fa;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+background:rgba(0,0,0,0.65);
+padding:25px 45px;
+border-radius:10px;
+backdrop-filter:blur(6px);
+}
+
+/* SECCIONES */
+
+.section{
+padding:70px 40px;
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.section p{
+line-height:1.7;
+font-size:18px;
+color:#d1d5db;
+}
+
+/* VALORES */
+
+.values{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+margin-top:40px;
+}
+
+.value{
+background:#111827;
+padding:30px;
+border-radius:12px;
+width:260px;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.value:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.7);
+}
+
+.value h3{
+color:#60a5fa;
+}
+
+/* DIFERENCIA */
+
+.diferencia{
+background:#111827;
+padding:50px 40px;
+margin-top:50px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* CTA */
+
+.cta{
+margin-top:40px;
+}
+
+.cta a{
+background:linear-gradient(90deg,#2563eb,#1d4ed8);
+padding:18px 45px;
+text-decoration:none;
+color:white;
+border-radius:8px;
+font-weight:bold;
+font-size:18px;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(37,99,235,0.6);
+}
+
+.cta a:hover{
+transform:scale(1.05);
+box-shadow:0 15px 35px rgba(37,99,235,0.9);
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:25px;
+margin-top:50px;
+color:#9ca3af;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px 22px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo-area">
+<img src="logo.png" alt="DriveRey Logo">
+<h1>DriveRey</h1>
+</div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="3experiencia.html">Experiencia</a></li>
+<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+<li><a href="5vehiculos.html">Vehículos</a></li>
+<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+<li><a href="4reseñas.html">Reseñas</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Sobre Nosotros</h1>
+
+</section>
+
+
+<section class="section">
+
+<h2>Nuestra Historia</h2>
+
+<p>
+DriveRey nace con una idea clara: crear una forma más simple,
+segura y eficiente de vender vehículos particulares.
+</p>
+
+<p>
+Muchos propietarios quieren vender su auto pero no tienen tiempo para
+responder mensajes, filtrar compradores o gestionar publicaciones.
+Nuestro servicio se encarga de todo ese proceso.
+</p>
+
+<p>
+Nos especializamos en vehículos desde los 16.000 USD en adelante,
+trabajando con compradores reales y un sistema de venta transparente.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<h2>Nuestra Misión</h2>
+
+<p>
+Conectar propietarios de vehículos con compradores reales,
+facilitando un proceso de venta seguro, rápido y profesional.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<h2>Nuestros Valores</h2>
+
+<div class="values">
+
+<div class="value">
+<h3>Transparencia</h3>
+<p>
+Cada operación se maneja con total claridad para todas las partes.
+</p>
+</div>
+
+<div class="value">
+<h3>Confianza</h3>
+<p>
+Nuestro objetivo es que cada cliente se sienta seguro durante todo el proceso.
+</p>
+</div>
+
+<div class="value">
+<h3>Profesionalismo</h3>
+<p>
+Cada vehículo se presenta de manera profesional para maximizar su valor.
+</p>
+</div>
+
+<div class="value">
+<h3>Eficiencia</h3>
+<p>
+Filtramos compradores y gestionamos visitas para optimizar el tiempo del propietario.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="diferencia">
+
+<h2>¿Qué nos diferencia?</h2>
+
+<p>
+A diferencia de una concesionaria tradicional,
+el propietario no tiene que dejar su vehículo ni pagar comisiones por adelantado.
+</p>
+
+<p>
+Nos encargamos de publicar, promocionar el vehículo y coordinar
+las visitas con compradores interesados.
+</p>
+
+<p>
+El vehículo sigue siendo del propietario hasta el momento de la venta.
+</p>
+
+</div>
+
+<div class="cta">
+<a href="https://wa.me/541123283606">Coordinar una cita</a>
+</div>
+
+</section>
+
+
+<footer>
+
+<p>General Pacheco · Buenos Aires</p>
+
+</footer>
+
+
+<a class="whatsapp" href="https://wa.me/541123283606">
+WhatsApp
+</a>
+
+</body>
+
+</html>

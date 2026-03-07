@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experiencia | DriveRey</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+header{
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+padding:12px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
+}
+
+nav{
+width:100%;
+max-width:1200px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:45px;
+height:45px;
+border-radius:50%;
+box-shadow:0 0 12px rgba(96,165,250,0.8);
+}
+
+.logo-area h1{
+margin:0;
+font-size:22px;
+font-weight:bold;
+color:#60a5fa;
+}
+
+/* MENU */
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+position:relative;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#60a5fa;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* HERO */
+
+.hero{
+height:380px;
+background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:44px;
+background:rgba(0,0,0,0.65);
+padding:25px 45px;
+border-radius:10px;
+backdrop-filter:blur(5px);
+}
+
+/* CONTENEDOR */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:70px 20px;
+}
+
+/* TITULOS */
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+color:#60a5fa;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* TARJETAS */
+
+.card{
+background:#111827;
+padding:30px;
+border-radius:12px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.7);
+}
+
+.card h3{
+color:#60a5fa;
+}
+
+/* ESTADISTICAS */
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+margin-top:40px;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h2{
+font-size:42px;
+color:#60a5fa;
+}
+
+/* PROCESO */
+
+.process{
+margin-top:60px;
+}
+
+.step{
+margin-bottom:25px;
+padding:25px;
+background:#111827;
+border-left:5px solid #2563eb;
+border-radius:6px;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+margin-top:60px;
+}
+
+.cta h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.cta a{
+display:inline-block;
+margin-top:20px;
+background:linear-gradient(90deg,#2563eb,#1d4ed8);
+padding:18px 50px;
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+border-radius:8px;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(37,99,235,0.7);
+}
+
+.cta a:hover{
+transform:scale(1.05);
+box-shadow:0 15px 40px rgba(37,99,235,1);
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:30px;
+margin-top:70px;
+color:#9ca3af;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px 22px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo-area">
+<img src="logo.png" alt="DriveRey Logo">
+<h1>DriveRey</h1>
+</div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="3experiencia.html">Experiencia</a></li>
+<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+<li><a href="5vehiculos.html">Vehículos</a></li>
+<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+<li><a href="4reseñas.html">Reseñas</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Experiencia en compra y venta de vehículos</h1>
+
+</section>
+
+
+<div class="container">
+
+<h2 class="section-title">Experiencia en el mercado automotor</h2>
+
+<p style="text-align:center;max-width:900px;margin:auto;">
+Nuestro trabajo se basa en conectar propietarios de vehículos con compradores reales,
+utilizando un sistema transparente, seguro y profesional.
+A lo largo del tiempo hemos desarrollado un proceso eficiente para vender vehículos
+de manera rápida y al mejor valor posible dentro del mercado.
+</p>
+
+</div>
+
+
+<div class="container">
+
+<h2 class="section-title">Qué nos diferencia</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Selección de vehículos</h3>
+<p>
+Trabajamos con vehículos seleccionados priorizando unidades en excelente estado
+y con documentación lista para transferir.
+</p>
+</div>
+
+<div class="card">
+<h3>Publicidad profesional</h3>
+<p>
+Publicamos los autos en múltiples plataformas de alto alcance
+para encontrar compradores reales rápidamente.
+</p>
+</div>
+
+<div class="card">
+<h3>Intermediación segura</h3>
+<p>
+Coordinamos visitas, mostramos el vehículo y gestionamos
+las consultas de compradores para facilitar la operación.
+</p>
+</div>
+
+<div class="card">
+<h3>Negociación estratégica</h3>
+<p>
+Ayudamos a conseguir el mejor precio posible dentro del mercado
+sin perder tiempo con ofertas poco serias.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<h2 class="section-title">Resultados</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>+100</h2>
+<p>vehículos gestionados</p>
+</div>
+
+<div class="stat">
+<h2>30-45</h2>
+<p>días promedio de venta</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>transparencia en el proceso</p>
+</div>
+
+<div class="stat">
+<h2>0$</h2>
+<p>costos para comenzar</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container process">
+
+<h2 class="section-title">Nuestro proceso</h2>
+
+<div class="step">
+<strong>1. Evaluación del vehículo</strong><br>
+Analizamos el estado del vehículo, documentación y precio real de mercado.
+</div>
+
+<div class="step">
+<strong>2. Estrategia de publicación</strong><br>
+Publicamos el auto en múltiples plataformas con fotos profesionales
+y descripción optimizada para atraer compradores.
+</div>
+
+<div class="step">
+<strong>3. Gestión de consultas</strong><br>
+Filtramos interesados reales y coordinamos visitas seguras.
+</div>
+
+<div class="step">
+<strong>4. Cierre de operación</strong><br>
+Acompañamos todo el proceso hasta concretar la venta.
+</div>
+
+</div>
+
+
+<div class="container">
+
+<div class="cta">
+
+<h2>¿Querés vender tu vehículo?</h2>
+
+<p>
+Coordiná una cita para evaluar tu vehículo y conocer
+cómo podemos ayudarte a venderlo.
+</p>
+
+<a href="https://wa.me/541123283606">Coordinar una cita</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+Intermediación y comercialización de vehículos particulares  
+General Pacheco · Buenos Aires
+</p>
+
+</footer>
+
+
+<a class="whatsapp" href="https://wa.me/541123283606">
+WhatsApp
+</a>
+
+</body>
+</html>

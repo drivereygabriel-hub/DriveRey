@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DriveRey</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+z-index:999;
+
+background:linear-gradient(90deg,#000,#1e3a8a,#000);
+background-size:200% 200%;
+animation:gradientMove 6s infinite alternate;
+
+padding:12px 40px;
+
+box-shadow:0 5px 25px rgba(0,0,0,0.6);
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+@keyframes gradientMove{
+0%{background-position:left}
+100%{background-position:right}
+}
+
+/* LOGO AREA */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:45px;
+height:45px;
+border-radius:50%;
+box-shadow:0 0 12px rgba(96,165,250,0.9);
+}
+
+.logo-area h1{
+font-size:22px;
+color:#60a5fa;
+letter-spacing:1px;
+}
+
+/* MENU */
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+letter-spacing:1px;
+font-weight:500;
+padding:8px 14px;
+border-radius:6px;
+transition:all .3s ease;
+}
+
+nav a:hover{
+background:rgba(59,130,246,0.25);
+transform:translateY(-2px);
+color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+
+height:95vh;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+padding:30px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+background:rgba(0,0,0,.5);
+padding:45px;
+border-radius:12px;
+backdrop-filter:blur(6px);
+
+}
+
+.hero h1{
+
+font-size:48px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:19px;
+line-height:1.6;
+
+}
+
+.cta{
+
+margin-top:30px;
+
+}
+
+.cta a{
+
+background:#2563eb;
+padding:16px 35px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+transition:.3s;
+
+}
+
+.cta a:hover{
+
+background:#1e40af;
+transform:scale(1.05);
+
+}
+
+/* SECTIONS */
+
+.section{
+
+padding:90px 30px;
+text-align:center;
+
+}
+
+.section h2{
+
+font-size:34px;
+margin-bottom:25px;
+
+}
+
+/* CARDS */
+
+.cards{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+
+}
+
+.card{
+
+background:#111827;
+padding:30px;
+border-radius:12px;
+width:280px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 10px 35px rgba(0,0,0,.6);
+
+}
+
+.card h3{
+
+color:#60a5fa;
+margin-bottom:10px;
+
+}
+
+/* FONDO DIFERENTE */
+
+.section-dark{
+
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1493238792000-8113da705763");
+
+background-size:cover;
+background-position:center;
+
+}
+
+/* STATS */
+
+.stats{
+
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:40px;
+flex-wrap:wrap;
+
+}
+
+.stat{
+
+font-size:24px;
+
+}
+
+/* CTA FINAL */
+
+.cta-section{
+
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c");
+
+background-size:cover;
+background-position:center;
+
+padding:100px 30px;
+text-align:center;
+
+}
+
+.cta-section h2{
+
+font-size:36px;
+margin-bottom:15px;
+
+}
+
+.cta-section p{
+
+font-size:18px;
+margin-bottom:25px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:black;
+padding:25px;
+text-align:center;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+padding:16px 22px;
+border-radius:40px;
+color:white;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,.4);
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.05);
+
+}
+
+/* BOTON CTA FINAL */
+
+.cta-final{
+margin-top:40px;
+}
+
+.btn-cita{
+
+display:inline-block;
+
+font-size:22px;
+font-weight:bold;
+
+padding:20px 50px;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
+
+background-size:200% 200%;
+
+animation:btnGradient 4s infinite alternate;
+
+box-shadow:0 10px 35px rgba(37,99,235,0.6);
+
+transition:all .3s ease;
+
+}
+
+@keyframes btnGradient{
+
+0%{background-position:left}
+100%{background-position:right}
+
+}
+
+.btn-cita:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 15px 45px rgba(59,130,246,0.9);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo-area">
+<img src="logo.png" alt="DriveRey Logo">
+<h1>DriveRey</h1>
+</div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="3experiencia.html">Experiencia</a></li>
+<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+<li><a href="5vehiculos.html">Vehículos</a></li>
+<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+<li><a href="4reseñas.html">Reseñas</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Vendé tu auto rápido, seguro y sin complicaciones</h1>
+
+<p>
+Te ayudo a vender tu vehículo conectándolo con compradores reales.
+Sin dejar el auto en consignación y sin pagar absolutamente nada por adelantado.
+</p>
+
+<div class="cta">
+
+<a href="https://wa.me/541123283606">
+Coordinar una cita
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section class="section">
+
+<h2>Intermediación profesional de vehículos</h2>
+
+<p>
+Conecto propietarios con compradores reales y gestiono todo el proceso de venta.
+Desde la publicación del vehículo hasta la negociación final.
+</p>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section class="section section-dark">
+
+<h2>Cómo puedo ayudarte</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Publicación profesional</h3>
+<p>Publico tu vehículo en múltiples plataformas para conseguir compradores reales.</p>
+</div>
+
+<div class="card">
+<h3>Filtrado de compradores</h3>
+<p>Solo coordinamos visitas con personas realmente interesadas.</p>
+</div>
+
+<div class="card">
+<h3>Negociación</h3>
+<p>Te ayudo a conseguir el mejor precio posible por tu vehículo.</p>
+</div>
+
+<div class="card">
+<h3>Seguridad</h3>
+<p>Te acompaño en todo el proceso hasta concretar la venta.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- RESULTADOS -->
+
+<section class="section">
+
+<h2>Resultados</h2>
+
+<div class="stats">
+
+<div class="stat">
+<strong>+100</strong><br>
+Autos publicados
+</div>
+
+<div class="stat">
+<strong>+200</strong><br>
+Compradores activos
+</div>
+
+<div class="stat">
+<strong>+40</strong><br>
+Operaciones realizadas
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA FINAL -->
+
+<section class="cta-section">
+
+<h2>¿Querés vender tu auto?</h2>
+
+<p>
+Podemos coordinar una cita donde te quede cómodo.
+El sistema es transparente, seguro y seguís usando tu vehículo normalmente.
+</p>
+
+<div class="cta-final">
+
+<a href="https://wa.me/541123283606" class="btn-cita">
+🚗 Coordinar una cita gratuita
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Buenos Aires · Intermediación privada de vehículos</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/541123283606">
+WhatsApp
+</a>
+
+</body>
+
+</html>

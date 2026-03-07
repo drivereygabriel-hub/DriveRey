@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forma de Trabajo | DriveRey</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<meta name="description" content="Conocé cómo funciona nuestro sistema para vender tu auto de forma rápida, segura y transparente en Buenos Aires.">
+
+<style>
+
+/* FONDO GENERAL */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+
+background-image:
+linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* NAVBAR */
+
+header{
+background:linear-gradient(90deg,#0a2a66,#000);
+padding:12px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,0.6);
+}
+
+nav{
+width:100%;
+max-width:1200px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* LOGO + NOMBRE */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:45px;
+height:45px;
+border-radius:50%;
+box-shadow:0 0 12px rgba(0,140,255,0.8);
+}
+
+.logo-area h1{
+margin:0;
+font-size:22px;
+color:#00a2ff;
+letter-spacing:1px;
+}
+
+/* MENU */
+
+nav ul{
+list-style:none;
+display:flex;
+gap:22px;
+margin:0;
+padding:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+transition:0.3s;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:2px;
+background:#00a2ff;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+nav a:hover{
+color:#00a2ff;
+}
+
+/* HERO */
+
+.hero{
+height:360px;
+
+background-image:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* CONTENEDOR */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* SECCIONES */
+
+.section{
+margin-bottom:60px;
+text-align:center;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:20px;
+color:#00a2ff;
+}
+
+.section p{
+max-width:800px;
+margin:auto;
+line-height:1.7;
+opacity:0.9;
+}
+
+/* PASOS */
+
+.pasos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.paso{
+background:rgba(20,20,20,0.9);
+padding:30px;
+border-radius:10px;
+border:1px solid #222;
+transition:0.35s;
+}
+
+.paso:hover{
+transform:translateY(-6px);
+border:1px solid #00a2ff;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.numero{
+font-size:34px;
+font-weight:bold;
+color:#00a2ff;
+margin-bottom:10px;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+margin-top:70px;
+}
+
+.cta h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.cta p{
+opacity:0.9;
+margin-bottom:25px;
+}
+
+.boton{
+background:linear-gradient(45deg,#0077ff,#00a2ff);
+color:white;
+padding:18px 40px;
+text-decoration:none;
+border-radius:40px;
+font-size:20px;
+font-weight:bold;
+transition:0.35s;
+display:inline-block;
+}
+
+.boton:hover{
+transform:scale(1.08);
+box-shadow:0 15px 35px rgba(0,162,255,0.6);
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+text-align:center;
+padding:30px;
+margin-top:60px;
+border-top:1px solid #222;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo-area">
+<img src="logo.png" alt="DriveRey Logo">
+<h1>DriveRey</h1>
+</div>
+
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="3experiencia.html">Experiencia</a></li>
+<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+<li><a href="5vehiculos.html">Vehículos</a></li>
+<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+<li><a href="4reseñas.html">Reseñas</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Cómo Funciona Nuestro Sistema</h1>
+
+<p>Vendé tu auto de forma rápida, segura y sin complicaciones</p>
+
+</section>
+
+<section class="container">
+
+<div class="section">
+
+<h2>Un sistema simple y transparente</h2>
+
+<p>
+Nuestro trabajo consiste en intermediar la venta de tu vehículo conectándote con compradores reales.
+Nos encargamos de la publicación, negociación y coordinación de la operación para lograr una venta rápida y segura.
+</p>
+
+<p>
+El propietario mantiene siempre el control total del vehículo y de las condiciones de venta.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Proceso de trabajo</h2>
+
+<div class="pasos">
+
+<div class="paso">
+<div class="numero">1</div>
+<h3>Coordinamos una reunión</h3>
+<p>Nos reunimos en el lugar que te resulte más cómodo para analizar el vehículo y su valor real de mercado.</p>
+</div>
+
+<div class="paso">
+<div class="numero">2</div>
+<h3>Definimos el precio base</h3>
+<p>Establecemos un precio mínimo de venta acordado con el propietario.</p>
+</div>
+
+<div class="paso">
+<div class="numero">3</div>
+<h3>Publicación del vehículo</h3>
+<p>Publicamos el auto en múltiples plataformas de alto alcance.</p>
+</div>
+
+<div class="paso">
+<div class="numero">4</div>
+<h3>Gestión de interesados</h3>
+<p>Filtramos consultas y coordinamos visitas con compradores reales.</p>
+</div>
+
+<div class="paso">
+<div class="numero">5</div>
+<h3>Seña y cierre</h3>
+<p>Una vez aceptada la oferta, se toma una seña para asegurar la operación.</p>
+</div>
+
+<div class="paso">
+<div class="numero">6</div>
+<h3>Transferencia segura</h3>
+<p>El vehículo se entrega únicamente transferido para seguridad total.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="cta">
+
+<h2>¿Querés vender tu auto?</h2>
+
+<p>Coordiná una cita para evaluar tu vehículo.</p>
+
+<a class="boton" href="https://wa.me/541123283606">Coordinar una cita</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Intermediación privada de vehículos</p>
+
+<p>General Pacheco · Buenos Aires</p>
+
+<p>WhatsApp: 11 2328 3606</p>
+
+</footer>
+
+</body>
+
+</html>
