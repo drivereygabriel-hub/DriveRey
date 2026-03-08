@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Autos 0km adjudicados | DriveRey</title>
+
+<meta name="description" content="Conocé qué es un auto 0km adjudicado, cómo funciona un plan adjudicado y cómo comprar o vender vehículos adjudicados de forma segura en Buenos Aires.">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR (MISMO ESTILO SIMPLE) */
+
+nav{
+position:sticky;
+top:0;
+z-index:999;
+
+background:linear-gradient(90deg,#000,#1e3a8a,#000);
+background-size:200% 200%;
+animation:gradientMove 6s infinite alternate;
+
+padding:18px 0;
+
+box-shadow:0 5px 25px rgba(0,0,0,0.6);
+}
+
+@keyframes gradientMove{
+0%{background-position:left}
+100%{background-position:right}
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:35px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+letter-spacing:1px;
+font-weight:500;
+padding:8px 14px;
+border-radius:6px;
+transition:.3s;
+}
+
+nav a:hover{
+background:rgba(59,130,246,0.25);
+transform:translateY(-2px);
+color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+
+height:80vh;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+padding:30px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+background:rgba(0,0,0,.55);
+padding:45px;
+border-radius:12px;
+
+}
+
+.hero h1{
+font-size:44px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.6;
+}
+
+/* SECCIONES */
+
+.section{
+padding:90px 30px;
+text-align:center;
+max-width:1000px;
+margin:auto;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:25px;
+color:#60a5fa;
+}
+
+.section p{
+line-height:1.7;
+margin-bottom:20px;
+}
+
+/* CARDS */
+
+.cards{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+
+}
+
+.card{
+
+background:#111827;
+padding:30px;
+border-radius:12px;
+width:260px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+
+}
+
+.card h3{
+color:#60a5fa;
+margin-bottom:10px;
+}
+
+/* CTA FINAL */
+
+.cta-section{
+
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1493238792000-8113da705763");
+
+background-size:cover;
+background-position:center;
+
+padding:100px 30px;
+text-align:center;
+
+}
+
+.cta-section h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.cta-section p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.btn-cita{
+
+display:inline-block;
+
+font-size:22px;
+font-weight:bold;
+
+padding:20px 50px;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
+
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:25px;
+text-align:center;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+background:#25D366;
+
+padding:16px 22px;
+
+border-radius:40px;
+
+color:white;
+
+font-weight:bold;
+
+text-decoration:none;
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+nav ul{
+flex-wrap:wrap;
+gap:15px;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="3experiencia.html">Experiencia</a></li>
+<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+<li><a href="5vehiculos.html">Vehículos</a></li>
+<li><a href="7autos-prendados.html">Autos prendados</a></li>
+<li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
+<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+<li><a href="4reseñas.html">Reseñas</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Autos 0 km adjudicados</h1>
+
+<p>
+Un auto adjudicado es un vehículo que proviene de un plan de ahorro
+que ya fue adjudicado y tiene asignada la unidad 0 km.
+Muchas personas venden estos planes o adjudicaciones antes de retirar el vehículo.
+</p>
+
+</div>
+
+</section>
+
+<!-- QUE ES -->
+
+<section class="section">
+
+<h2>¿Qué es un auto adjudicado?</h2>
+
+<p>
+Un auto adjudicado es un vehículo que proviene de un plan de ahorro
+que ya fue adjudicado mediante sorteo o licitación.
+Esto significa que el titular del plan ya tiene derecho a retirar el vehículo 0 km,
+aunque todavía pueden quedar cuotas por pagar.
+</p>
+
+<p>
+Muchas personas deciden vender su plan adjudicado porque necesitan el dinero,
+no quieren continuar pagando las cuotas o prefieren cambiar de vehículo.
+</p>
+
+</section>
+
+<!-- COMO FUNCIONA -->
+
+<section class="section">
+
+<h2>Cómo funciona la compra o venta de un adjudicado</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Plan adjudicado</h3>
+<p>
+El titular ya obtuvo el derecho de retirar el vehículo dentro del plan de ahorro.
+</p>
+</div>
+
+<div class="card">
+<h3>Transferencia</h3>
+<p>
+El plan puede transferirse a otra persona que continuará con las cuotas restantes.
+</p>
+</div>
+
+<div class="card">
+<h3>Entrega del vehículo</h3>
+<p>
+Una vez completados los requisitos del plan, se puede retirar el vehículo 0 km.
+</p>
+</div>
+
+<div class="card">
+<h3>Operación segura</h3>
+<p>
+Es importante realizar la operación correctamente para evitar problemas administrativos.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- BENEFICIOS -->
+
+<section class="section">
+
+<h2>Ventajas de comprar un adjudicado</h2>
+
+<p>
+Comprar un plan adjudicado puede permitir acceder a un vehículo 0 km
+sin tener que esperar el sorteo del plan.
+</p>
+
+<p>
+También puede representar una oportunidad para adquirir un auto nuevo
+con condiciones financieras diferentes a una compra tradicional.
+</p>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<h2>¿Querés vender o comprar un adjudicado?</h2>
+
+<p>
+Podemos analizar tu caso y ayudarte a encontrar compradores
+o personas interesadas en este tipo de operaciones.
+</p>
+
+<a href="https://wa.me/541123283606" class="btn-cita">
+🚗 Consultar por WhatsApp
+</a>
+
+</section>
+
+<footer>
+
+<p>Buenos Aires · Intermediación privada de vehículos</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/541123283606">
+WhatsApp
+</a>
+
+</body>
+
+</html>
