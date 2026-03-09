@@ -27,49 +27,83 @@ color:white;
 scroll-behavior:smooth;
 }
 
-/* NAVBAR (MISMO ESTILO SIMPLE) */
+/* =====================
+NAVBAR MAESTRA
+===================== */
 
-nav{
+header{
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+padding:12px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
 position:sticky;
 top:0;
-z-index:999;
-
-background:linear-gradient(90deg,#000,#1e3a8a,#000);
-background-size:200% 200%;
-animation:gradientMove 6s infinite alternate;
-
-padding:18px 0;
-
-box-shadow:0 5px 25px rgba(0,0,0,0.6);
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
-@keyframes gradientMove{
-0%{background-position:left}
-100%{background-position:right}
+nav{
+width:100%;
+max-width:1200px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:45px;
+height:45px;
+border-radius:50%;
+box-shadow:0 0 12px rgba(96,165,250,0.8);
+}
+
+.logo-area h1{
+margin:0;
+font-size:22px;
+font-weight:bold;
+color:#60a5fa;
 }
 
 nav ul{
-display:flex;
-justify-content:center;
-gap:35px;
 list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 font-size:16px;
-letter-spacing:1px;
-font-weight:500;
-padding:8px 14px;
-border-radius:6px;
-transition:.3s;
+position:relative;
+transition:0.3s;
 }
 
 nav a:hover{
-background:rgba(59,130,246,0.25);
-transform:translateY(-2px);
 color:#60a5fa;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#60a5fa;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 /* HERO */
@@ -268,9 +302,14 @@ align-items:center;
 
 <body>
 
-<!-- NAVBAR -->
+<header>
 
 <nav>
+
+<div class="logo-area">
+<img src="logo.png">
+<h1>DriveRey</h1>
+</div>
 
 <ul>
 
@@ -287,7 +326,7 @@ align-items:center;
 
 </nav>
 
-<!-- HERO -->
+</header>
 
 <section class="hero">
 
@@ -304,8 +343,6 @@ Muchas personas venden estos planes o adjudicaciones antes de retirar el vehícu
 </div>
 
 </section>
-
-<!-- QUE ES -->
 
 <section class="section">
 
@@ -325,8 +362,6 @@ no quieren continuar pagando las cuotas o prefieren cambiar de vehículo.
 
 </section>
 
-<!-- COMO FUNCIONA -->
-
 <section class="section">
 
 <h2>Cómo funciona la compra o venta de un adjudicado</h2>
@@ -335,37 +370,27 @@ no quieren continuar pagando las cuotas o prefieren cambiar de vehículo.
 
 <div class="card">
 <h3>Plan adjudicado</h3>
-<p>
-El titular ya obtuvo el derecho de retirar el vehículo dentro del plan de ahorro.
-</p>
+<p>El titular ya obtuvo el derecho de retirar el vehículo dentro del plan de ahorro.</p>
 </div>
 
 <div class="card">
 <h3>Transferencia</h3>
-<p>
-El plan puede transferirse a otra persona que continuará con las cuotas restantes.
-</p>
+<p>El plan puede transferirse a otra persona que continuará con las cuotas restantes.</p>
 </div>
 
 <div class="card">
 <h3>Entrega del vehículo</h3>
-<p>
-Una vez completados los requisitos del plan, se puede retirar el vehículo 0 km.
-</p>
+<p>Una vez completados los requisitos del plan, se puede retirar el vehículo 0 km.</p>
 </div>
 
 <div class="card">
 <h3>Operación segura</h3>
-<p>
-Es importante realizar la operación correctamente para evitar problemas administrativos.
-</p>
+<p>Es importante realizar la operación correctamente para evitar problemas administrativos.</p>
 </div>
 
 </div>
 
 </section>
-
-<!-- BENEFICIOS -->
 
 <section class="section">
 
@@ -382,8 +407,6 @@ con condiciones financieras diferentes a una compra tradicional.
 </p>
 
 </section>
-
-<!-- CTA -->
 
 <section class="cta-section">
 
