@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vehículos | DriveRey</title>
+<title>Vehículos en Venta | DriveRey</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-<meta name="description" content="Listado de vehículos en DriveRey. Página en desarrollo. Consultá por WhatsApp para conocer los autos disponibles.">
+<meta name="description" content="Autos seleccionados en venta en Buenos Aires. Intermediación privada, consignación y venta segura de vehículos.">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+/* =====================
+BASE
+===================== */
 
 body{
+margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#0f172a;
 color:white;
-scroll-behavior:smooth;
+
+background-image:
+linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
 /* =====================
-NAVBAR MAESTRA
+NAVBAR (MAESTRA)
 ===================== */
 
 header{
@@ -50,6 +54,8 @@ align-items:center;
 justify-content:space-between;
 }
 
+/* LOGO */
+
 .logo-area{
 display:flex;
 align-items:center;
@@ -64,7 +70,9 @@ box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
+margin:0;
 font-size:22px;
+font-weight:bold;
 color:#60a5fa;
 }
 
@@ -74,6 +82,8 @@ nav ul{
 list-style:none;
 display:flex;
 gap:25px;
+margin:0;
+padding:0;
 }
 
 nav a{
@@ -81,7 +91,7 @@ color:white;
 text-decoration:none;
 font-size:16px;
 position:relative;
-transition:.3s;
+transition:0.3s;
 }
 
 nav a:hover{
@@ -91,145 +101,176 @@ color:#60a5fa;
 nav a::after{
 content:'';
 position:absolute;
-left:0;
-bottom:-5px;
-width:0;
+width:0%;
 height:2px;
 background:#60a5fa;
-transition:.3s;
+left:0;
+bottom:-5px;
+transition:0.3s;
 }
 
 nav a:hover::after{
 width:100%;
 }
 
-/* MOBILE */
+/* =====================
+HERO
+===================== */
 
-.menu-toggle{
-display:none;
-font-size:30px;
-cursor:pointer;
+.hero{
+height:350px;
+
+background-image:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
 }
 
 /* =====================
-CONTENIDO
+CONTENEDOR
 ===================== */
 
-.main{
-min-height:80vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px 20px;
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
 }
 
-.card{
-background:rgba(0,0,0,0.55);
+/* =====================
+GRID VEHÍCULOS
+===================== */
+
+.grid-autos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* TARJETA AUTO */
+
+.auto{
+background:rgba(20,20,20,0.9);
+border-radius:10px;
+overflow:hidden;
+border:1px solid #222;
+transition:0.35s;
 backdrop-filter:blur(6px);
-padding:50px 40px;
-border-radius:14px;
-max-width:700px;
-text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,0.7);
 }
 
-.card h1{
-font-size:42px;
-margin-bottom:20px;
+.auto:hover{
+transform:translateY(-8px);
+border:1px solid #60a5fa;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.auto img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.auto-info{
+padding:20px;
+}
+
+.auto-info h3{
+margin:0;
+font-size:20px;
 color:#60a5fa;
 }
 
-.card p{
-font-size:18px;
-line-height:1.6;
-margin-bottom:30px;
-opacity:0.95;
+.auto-info p{
+margin:8px 0;
+opacity:0.8;
 }
 
-.card span{
-display:block;
-font-size:16px;
-opacity:0.85;
-margin-bottom:35px;
-}
-
-/* CTA */
-
-.btn{
-display:inline-block;
-background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
-color:white;
-padding:18px 45px;
-border-radius:10px;
-font-size:20px;
+.precio{
+font-size:24px;
 font-weight:bold;
+margin:12px 0;
+color:#60a5fa;
+}
+
+/* BOTÓN */
+
+.boton{
+display:inline-block;
+background:linear-gradient(45deg,#2563eb,#3b82f6);
+color:white;
+padding:12px 25px;
 text-decoration:none;
-transition:.3s;
-box-shadow:0 10px 30px rgba(37,99,235,0.6);
+border-radius:30px;
+font-weight:bold;
+transition:0.3s;
 }
 
-.btn:hover{
-transform:scale(1.06);
+.boton:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(37,99,235,0.6);
 }
 
-/* FOOTER */
+/* =====================
+FOOTER
+===================== */
 
 footer{
-background:black;
-padding:25px;
+background:#000;
 text-align:center;
+padding:30px;
+margin-top:60px;
+border-top:1px solid #222;
+color:#9ca3af;
 }
 
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-padding:16px 22px;
-border-radius:40px;
-color:white;
-font-weight:bold;
-text-decoration:none;
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
 }
-
-/* RESPONSIVE */
 
 @media (max-width:768px){
 
-.menu-toggle{
-display:block;
-}
+  .menu-toggle{
+    display:block;
+  }
 
-nav ul{
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:#000;
-flex-direction:column;
-align-items:center;
-display:none;
-padding:20px 0;
-}
+  nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
 
-nav ul.active{
-display:flex;
-}
+  nav ul.active{
+    display:flex;
+  }
 
-nav ul li{
-margin:12px 0;
-}
-
-.card h1{
-font-size:32px;
-}
-
-.card p{
-font-size:16px;
-}
-
+  nav ul li{
+    margin:12px 0;
+  }
 }
 
 </style>
@@ -242,61 +283,94 @@ font-size:16px;
 
 <nav>
 
-<div class="logo-area">
-<img src="logo.png" alt="DriveRey Logo">
-<h1>DriveRey</h1>
-</div>
+  <div class="logo-area">
+    <img src="logo.png" alt="DriveRey Logo">
+    <h1>DriveRey</h1>
+  </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<ul id="menu">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="3experiencia.html">Experiencia</a></li>
-<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
-<li><a href="5vehiculos.html">Vehículos</a></li>
-<li><a href="7autos-prendados.html">Autos prendados</a></li>
-<li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
-<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
-<li><a href="4reseñas.html">Reseñas</a></li>
-</ul>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="3experiencia.html">Experiencia</a></li>
+    <li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+    <li><a href="5vehiculos.html">Vehículos</a></li>
+    <li><a href="7autos-prendados.html">Autos prendados</a></li>
+    <li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
+    <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+    <li><a href="4reseñas.html">Reseñas</a></li>
+  </ul>
 
 </nav>
 
 </header>
 
-<main class="main">
+<section class="hero">
 
-<div class="card">
+<h1>Vehículos Disponibles</h1>
+<p>Autos seleccionados para venta rápida y segura</p>
 
-<h1>Página en desarrollo</h1>
+</section>
 
-<p>
-Estamos preparando el listado de vehículos disponibles para ofrecerte
-una experiencia clara, ordenada y actualizada.
-</p>
+<section class="container">
 
-<span>
-Mientras tanto, podés consultarnos directamente y te informamos
-los autos disponibles en este momento.
-</span>
+<div class="grid-autos">
 
-<a href="https://wa.me/541123283606" class="btn">
-Consultar por WhatsApp
-</a>
+<div class="auto">
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+<div class="auto-info">
+<h3>Toyota Corolla XEI 2019</h3>
+<p>117.000 km</p>
+<div class="precio">USD 16.000</div>
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+</div>
+</div>
+
+<div class="auto">
+<img src="https://images.unsplash.com/photo-1617814076668-36c5b7e8e8bb">
+<div class="auto-info">
+<h3>Volkswagen Amarok Highline</h3>
+<p>130.000 km</p>
+<div class="precio">USD 24.000</div>
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+</div>
+</div>
+
+<div class="auto">
+<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a">
+<div class="auto-info">
+<h3>Jeep Compass Longitude</h3>
+<p>85.000 km</p>
+<div class="precio">USD 22.000</div>
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+</div>
+</div>
+
+<div class="auto">
+<img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
+<div class="auto-info">
+<h3>Ford Ranger Limited</h3>
+<p>92.000 km</p>
+<div class="precio">USD 31.000</div>
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+</div>
+</div>
 
 </div>
 
-</main>
+</section>
 
 <footer>
-<p>Buenos Aires · Intermediación privada de vehículos</p>
-</footer>
 
-<a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
+<p>Intermediación privada de vehículos</p>
+<p>General Pacheco · Buenos Aires</p>
+<p>WhatsApp: 11 2328 3606</p>
+
+</footer>
 
 <script>
 function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
+  document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
