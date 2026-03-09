@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Autos 0km adjudicados | DriveRey</title>
+<title>Vehículos disponibles | DriveRey</title>
 
-<meta name="description" content="Conocé qué es un auto 0km adjudicado, cómo funciona un plan adjudicado y cómo comprar o vender vehículos adjudicados de forma segura en Buenos Aires.">
+<meta name="description" content="Sección de vehículos en desarrollo. Próximamente vas a poder ver los autos disponibles en DriveRey.">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -54,8 +54,6 @@ nav{
   justify-content:space-between;
 }
 
-/* LOGO */
-
 .logo-area{
   display:flex;
   align-items:center;
@@ -75,8 +73,6 @@ nav{
   color:#60a5fa;
 }
 
-/* MENU */
-
 nav ul{
   list-style:none;
   display:flex;
@@ -88,7 +84,7 @@ nav a{
   text-decoration:none;
   font-size:16px;
   position:relative;
-  transition:0.3s;
+  transition:.3s;
 }
 
 nav a:hover{
@@ -103,14 +99,12 @@ nav a::after{
   background:#60a5fa;
   left:0;
   bottom:-5px;
-  transition:0.3s;
+  transition:.3s;
 }
 
 nav a:hover::after{
   width:100%;
 }
-
-/* BOTÓN MOBILE */
 
 .menu-toggle{
   display:none;
@@ -119,126 +113,58 @@ nav a:hover::after{
 }
 
 /* =====================
-HERO
+PÁGINA EN DESARROLLO
 ===================== */
 
-.hero{
-  height:80vh;
-  background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-    url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c");
-  background-size:cover;
-  background-position:center;
+.dev-section{
+  min-height:85vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:30px;
+  padding:40px 20px;
 }
 
-.hero-content{
-  max-width:850px;
-  background:rgba(0,0,0,.55);
-  padding:45px;
-  border-radius:12px;
+.dev-box{
+  max-width:700px;
+  background:#111827;
+  padding:60px 40px;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
 }
 
-.hero h1{
-  font-size:44px;
+.dev-box h1{
+  font-size:42px;
   margin-bottom:20px;
-}
-
-.hero p{
-  font-size:18px;
-  line-height:1.6;
-}
-
-/* =====================
-SECCIONES
-===================== */
-
-.section{
-  padding:90px 30px;
-  text-align:center;
-  max-width:1000px;
-  margin:auto;
-}
-
-.section h2{
-  font-size:34px;
-  margin-bottom:25px;
   color:#60a5fa;
 }
 
-.section p{
+.dev-box p{
+  font-size:18px;
   line-height:1.7;
   margin-bottom:20px;
 }
 
-/* CARDS */
-
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
-  margin-top:40px;
+.dev-icon{
+  font-size:60px;
+  margin-bottom:20px;
 }
 
-.card{
-  background:#111827;
-  padding:30px;
-  border-radius:12px;
-  width:260px;
-  transition:.4s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 10px 30px rgba(0,0,0,.6);
-}
-
-.card h3{
-  color:#60a5fa;
-  margin-bottom:10px;
-}
-
-/* =====================
-CTA FINAL
-===================== */
-
-.cta-section{
-  background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-    url("https://images.unsplash.com/photo-1493238792000-8113da705763");
-  background-size:cover;
-  background-position:center;
-  padding:100px 30px;
-  text-align:center;
-}
-
-.cta-section h2{
-  font-size:36px;
-  margin-bottom:15px;
-}
-
-.cta-section p{
-  font-size:18px;
-  margin-bottom:25px;
-}
-
-.btn-cita{
+.btn-whatsapp{
   display:inline-block;
-  font-size:22px;
+  margin-top:25px;
+  padding:18px 45px;
+  font-size:20px;
   font-weight:bold;
-  padding:20px 50px;
   color:white;
   text-decoration:none;
-  border-radius:12px;
+  border-radius:10px;
   background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
 }
 
-/* FOOTER */
+/* =====================
+FOOTER
+===================== */
 
 footer{
   background:black;
@@ -262,7 +188,7 @@ footer{
 }
 
 /* =====================
-RESPONSIVE (MOBILE)
+RESPONSIVE
 ===================== */
 
 @media (max-width:768px){
@@ -291,13 +217,12 @@ RESPONSIVE (MOBILE)
     margin:12px 0;
   }
 
-  .hero h1{
-    font-size:30px;
+  .dev-box h1{
+    font-size:32px;
   }
 
-  .cards{
-    flex-direction:column;
-    align-items:center;
+  .dev-box p{
+    font-size:16px;
   }
 }
 
@@ -331,43 +256,22 @@ RESPONSIVE (MOBILE)
 </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Autos 0 km adjudicados</h1>
+<section class="dev-section">
+  <div class="dev-box">
+    <div class="dev-icon">🚧</div>
+    <h1>Sección en desarrollo</h1>
     <p>
-      Un auto adjudicado proviene de un plan de ahorro que ya fue adjudicado
-      y tiene asignada la unidad 0 km, aunque puede tener cuotas pendientes.
+      Estamos trabajando para mostrarte todos los vehículos disponibles
+      de forma clara y ordenada.
     </p>
+    <p>
+      Mientras tanto, podés consultarnos directamente y te enviamos
+      las opciones disponibles según tu necesidad.
+    </p>
+    <a href="https://wa.me/541123283606" class="btn-whatsapp">
+      Consultar por WhatsApp
+    </a>
   </div>
-</section>
-
-<section class="section">
-  <h2>¿Qué es un auto adjudicado?</h2>
-  <p>Es un vehículo cuyo plan de ahorro ya fue adjudicado por sorteo o licitación.</p>
-  <p>El titular tiene derecho a retirar el vehículo, aunque resten cuotas.</p>
-</section>
-
-<section class="section">
-  <h2>Cómo funciona la operación</h2>
-
-  <div class="cards">
-    <div class="card"><h3>Plan adjudicado</h3><p>El titular ya tiene derecho al vehículo.</p></div>
-    <div class="card"><h3>Transferencia</h3><p>El plan puede transferirse legalmente.</p></div>
-    <div class="card"><h3>Entrega</h3><p>Se retira el vehículo al cumplir los requisitos.</p></div>
-    <div class="card"><h3>Operación segura</h3><p>Acompañamiento durante todo el proceso.</p></div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Ventajas de un adjudicado</h2>
-  <p>Accedés a un 0 km sin esperar el sorteo.</p>
-  <p>Alternativa financiera distinta a una compra tradicional.</p>
-</section>
-
-<section class="cta-section">
-  <h2>¿Querés vender o comprar un adjudicado?</h2>
-  <p>Analizamos tu caso y te asesoramos.</p>
-  <a href="https://wa.me/541123283606" class="btn-cita">🚗 Consultar por WhatsApp</a>
 </section>
 
 <footer>
