@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -13,6 +12,10 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 <style>
+
+/* =====================
+BASE
+===================== */
 
 *{
 margin:0;
@@ -36,43 +39,42 @@ position:fixed;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-
 width:700px;
 height:700px;
-
 background-image:url("logo.png");
 background-repeat:no-repeat;
 background-position:center;
 background-size:contain;
-
 opacity:0.05;
-
 z-index:-1;
 pointer-events:none;
 }
 
-/* NAVBAR */
+/* =====================
+NAVBAR (MAESTRA)
+===================== */
 
-nav{
+header{
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+padding:12px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
 position:sticky;
 top:0;
-z-index:999;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
+}
 
-background:linear-gradient(90deg,#000,#1e3a8a,#000);
-background-size:200% 200%;
-animation:gradientMove 6s infinite alternate;
-
-padding:12px 40px;
-
+nav{
+width:100%;
+max-width:1200px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
 
-@keyframes gradientMove{
-0%{background-position:left}
-100%{background-position:right}
-}
+/* LOGO */
 
 .logo-area{
 display:flex;
@@ -84,62 +86,76 @@ gap:12px;
 width:45px;
 height:45px;
 border-radius:50%;
+box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
+margin:0;
 font-size:22px;
+font-weight:bold;
 color:#60a5fa;
 }
 
+/* MENU */
+
 nav ul{
-display:flex;
-gap:35px;
 list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 font-size:16px;
-padding:8px 14px;
-border-radius:6px;
-transition:.3s;
+position:relative;
+transition:0.3s;
 }
 
 nav a:hover{
-background:rgba(59,130,246,0.25);
 color:#60a5fa;
 }
 
-/* HERO */
+nav a::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#60a5fa;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* =====================
+HERO
+===================== */
 
 .hero{
-
 height:80vh;
-
 background:
 linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
 url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
 padding:30px;
-
 }
 
 .hero-content{
-
 max-width:850px;
 background:rgba(0,0,0,.5);
 padding:45px;
 border-radius:12px;
-
 }
 
 .hero h1{
@@ -165,7 +181,9 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTIONS */
+/* =====================
+SECCIONES
+===================== */
 
 .section{
 padding:90px 30px;
@@ -207,7 +225,9 @@ color:#60a5fa;
 margin-bottom:10px;
 }
 
-/* CTA FINAL */
+/* =====================
+CTA FINAL
+===================== */
 
 .cta-section{
 background:#111827;
@@ -222,24 +242,15 @@ margin-bottom:15px;
 }
 
 .btn-cita{
-
 display:inline-block;
-
 font-size:20px;
 font-weight:bold;
-
 padding:18px 45px;
-
 color:white;
-
 text-decoration:none;
-
 border-radius:10px;
-
 background:#2563eb;
-
 margin-top:25px;
-
 }
 
 /* FOOTER */
@@ -249,6 +260,7 @@ background:black;
 padding:25px;
 text-align:center;
 margin-top:60px;
+color:#9ca3af;
 }
 
 /* WHATSAPP */
@@ -292,17 +304,16 @@ align-items:center;
 
 <body>
 
-<!-- NAVBAR -->
+<header>
 
 <nav>
 
 <div class="logo-area">
-<img src="logo.png">
+<img src="logo.png" alt="DriveRey Logo">
 <h1>DriveRey</h1>
 </div>
 
 <ul>
-
 <li><a href="index.html">Inicio</a></li>
 <li><a href="3experiencia.html">Experiencia</a></li>
 <li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
@@ -311,12 +322,11 @@ align-items:center;
 <li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
 <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
 <li><a href="4reseñas.html">Reseñas</a></li>
-
 </ul>
 
 </nav>
 
-<!-- HERO -->
+</header>
 
 <section class="hero">
 
@@ -331,16 +341,12 @@ con compradores que conocen este tipo de transacciones.
 </p>
 
 <div class="cta">
-<a href="https://wa.me/541123283606">
-Consultar por WhatsApp
-</a>
+<a href="https://wa.me/541123283606">Consultar por WhatsApp</a>
 </div>
 
 </div>
 
 </section>
-
-<!-- INFO -->
 
 <section class="section">
 
@@ -357,8 +363,6 @@ la prenda, pero existen formas seguras de realizar la operación.
 </p>
 
 </section>
-
-<!-- COMO FUNCIONA -->
 
 <section class="section">
 
@@ -390,15 +394,11 @@ la prenda, pero existen formas seguras de realizar la operación.
 
 </section>
 
-<!-- CTA FINAL -->
-
 <section class="cta-section">
 
 <h2>¿Tenés un auto prendado y querés venderlo?</h2>
 
-<p>
-Podemos evaluar tu caso y explicarte las opciones disponibles.
-</p>
+<p>Podemos evaluar tu caso y explicarte las opciones disponibles.</p>
 
 <a href="https://wa.me/541123283606" class="btn-cita">
 🚗 Hablar por WhatsApp
@@ -417,6 +417,5 @@ WhatsApp
 </a>
 
 </body>
-
-
 </html>
+
