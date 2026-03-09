@@ -237,6 +237,39 @@ border-top:1px solid #222;
 color:#9ca3af;
 }
 
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  nav ul li{
+    margin:12px 0;
+  }
+}
+
 </style>
 
 </head>
@@ -247,23 +280,23 @@ color:#9ca3af;
 
 <nav>
 
-<div class="logo-area">
-<img src="logo.png" alt="DriveRey Logo">
-<h1>DriveRey</h1>
-</div>
+  <div class="logo-area">
+    <img src="logo.png" alt="DriveRey Logo">
+    <h1>DriveRey</h1>
+  </div>
 
-<ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<li><a href="index.html">Inicio</a></li>
-<li><a href="3experiencia.html">Experiencia</a></li>
-<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
-<li><a href="5vehiculos.html">Vehículos</a></li>
-<li><a href="7autos-prendados.html">Autos prendados</a></li>
-<li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
-<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
-<li><a href="4reseñas.html">Reseñas</a></li>
-
-</ul>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="3experiencia.html">Experiencia</a></li>
+    <li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+    <li><a href="5vehiculos.html">Vehículos</a></li>
+    <li><a href="7autos-prendados.html">Autos prendados</a></li>
+    <li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
+    <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+    <li><a href="4reseñas.html">Reseñas</a></li>
+  </ul>
 
 </nav>
 
@@ -359,8 +392,11 @@ General Pacheco · Buenos Aires
 
 </footer>
 
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
-
-
-
