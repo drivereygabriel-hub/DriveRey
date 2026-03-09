@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -13,7 +12,9 @@
 
 <style>
 
-/* FONDO GENERAL */
+/* =====================
+BASE
+===================== */
 
 body{
 margin:0;
@@ -29,10 +30,12 @@ background-position:center;
 background-attachment:fixed;
 }
 
-/* NAVBAR */
+/* =====================
+NAVBAR (MAESTRA)
+===================== */
 
 header{
-background:linear-gradient(90deg,#0a2a66,#000);
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
 padding:12px 40px;
 display:flex;
 justify-content:center;
@@ -40,7 +43,7 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,0.6);
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
 nav{
@@ -51,7 +54,7 @@ align-items:center;
 justify-content:space-between;
 }
 
-/* LOGO + NOMBRE */
+/* LOGO */
 
 .logo-area{
 display:flex;
@@ -63,14 +66,14 @@ gap:12px;
 width:45px;
 height:45px;
 border-radius:50%;
-box-shadow:0 0 12px rgba(0,140,255,0.8);
+box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
 margin:0;
 font-size:22px;
-color:#00a2ff;
-letter-spacing:1px;
+font-weight:bold;
+color:#60a5fa;
 }
 
 /* MENU */
@@ -78,7 +81,7 @@ letter-spacing:1px;
 nav ul{
 list-style:none;
 display:flex;
-gap:22px;
+gap:25px;
 margin:0;
 padding:0;
 }
@@ -86,19 +89,23 @@ padding:0;
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
+font-size:16px;
 position:relative;
 transition:0.3s;
 }
 
+nav a:hover{
+color:#60a5fa;
+}
+
 nav a::after{
-content:"";
+content:'';
 position:absolute;
-left:0;
-bottom:-6px;
-width:0;
+width:0%;
 height:2px;
-background:#00a2ff;
+background:#60a5fa;
+left:0;
+bottom:-5px;
 transition:0.3s;
 }
 
@@ -106,11 +113,9 @@ nav a:hover::after{
 width:100%;
 }
 
-nav a:hover{
-color:#00a2ff;
-}
-
-/* HERO */
+/* =====================
+HERO
+===================== */
 
 .hero{
 height:360px;
@@ -139,7 +144,9 @@ font-size:18px;
 opacity:0.9;
 }
 
-/* CONTENEDOR */
+/* =====================
+CONTENEDOR
+===================== */
 
 .container{
 max-width:1100px;
@@ -157,7 +164,7 @@ text-align:center;
 .section h2{
 font-size:34px;
 margin-bottom:20px;
-color:#00a2ff;
+color:#60a5fa;
 }
 
 .section p{
@@ -186,14 +193,14 @@ transition:0.35s;
 
 .paso:hover{
 transform:translateY(-6px);
-border:1px solid #00a2ff;
+border:1px solid #60a5fa;
 box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
 .numero{
 font-size:34px;
 font-weight:bold;
-color:#00a2ff;
+color:#60a5fa;
 margin-bottom:10px;
 }
 
@@ -215,7 +222,7 @@ margin-bottom:25px;
 }
 
 .boton{
-background:linear-gradient(45deg,#0077ff,#00a2ff);
+background:linear-gradient(45deg,#2563eb,#3b82f6);
 color:white;
 padding:18px 40px;
 text-decoration:none;
@@ -228,7 +235,7 @@ display:inline-block;
 
 .boton:hover{
 transform:scale(1.08);
-box-shadow:0 15px 35px rgba(0,162,255,0.6);
+box-shadow:0 15px 35px rgba(37,99,235,0.6);
 }
 
 /* FOOTER */
@@ -239,6 +246,7 @@ text-align:center;
 padding:30px;
 margin-top:60px;
 border-top:1px solid #222;
+color:#9ca3af;
 }
 
 </style>
@@ -274,7 +282,6 @@ border-top:1px solid #222;
 <section class="hero">
 
 <h1>Cómo Funciona Nuestro Sistema</h1>
-
 <p>Vendé tu auto de forma rápida, segura y sin complicaciones</p>
 
 </section>
@@ -345,7 +352,6 @@ El propietario mantiene siempre el control total del vehículo y de las condicio
 <div class="cta">
 
 <h2>¿Querés vender tu auto?</h2>
-
 <p>Coordiná una cita para evaluar tu vehículo.</p>
 
 <a class="boton" href="https://wa.me/541123283606">Coordinar una cita</a>
@@ -357,15 +363,12 @@ El propietario mantiene siempre el control total del vehículo y de las condicio
 <footer>
 
 <p>Intermediación privada de vehículos</p>
-
 <p>General Pacheco · Buenos Aires</p>
-
 <p>WhatsApp: 11 2328 3606</p>
 
 </footer>
 
 </body>
-
-
 </html>
+
 
