@@ -14,40 +14,40 @@
 <style>
 
 /* =====================
-BASE
+RESET / BASE
 ===================== */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#0f172a;
-color:white;
-scroll-behavior:smooth;
-position:relative;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#0f172a;
+  color:white;
+  scroll-behavior:smooth;
+  position:relative;
 }
 
 /* LOGO DE FONDO */
 
 body::before{
-content:"";
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:700px;
-height:700px;
-background-image:url("logo.png");
-background-repeat:no-repeat;
-background-position:center;
-background-size:contain;
-opacity:0.05;
-z-index:-1;
-pointer-events:none;
+  content:"";
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:700px;
+  height:700px;
+  background-image:url("logo.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  opacity:0.05;
+  z-index:-1;
+  pointer-events:none;
 }
 
 /* =====================
@@ -55,82 +55,87 @@ NAVBAR (MAESTRA)
 ===================== */
 
 header{
-background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
-padding:12px 40px;
-display:flex;
-justify-content:center;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 5px 20px rgba(0,0,0,0.6);
+  background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+  padding:12px 40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
 nav{
-width:100%;
-max-width:1200px;
-display:flex;
-align-items:center;
-justify-content:space-between;
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 /* LOGO */
 
 .logo-area{
-display:flex;
-align-items:center;
-gap:12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
 .logo-area img{
-width:45px;
-height:45px;
-border-radius:50%;
-box-shadow:0 0 12px rgba(96,165,250,0.8);
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
-margin:0;
-font-size:22px;
-font-weight:bold;
-color:#60a5fa;
+  font-size:22px;
+  font-weight:bold;
+  color:#60a5fa;
 }
 
 /* MENU */
 
 nav ul{
-list-style:none;
-display:flex;
-gap:25px;
-margin:0;
-padding:0;
+  list-style:none;
+  display:flex;
+  gap:25px;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-font-size:16px;
-position:relative;
-transition:0.3s;
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  position:relative;
+  transition:0.3s;
 }
 
 nav a:hover{
-color:#60a5fa;
+  color:#60a5fa;
 }
 
 nav a::after{
-content:'';
-position:absolute;
-width:0%;
-height:2px;
-background:#60a5fa;
-left:0;
-bottom:-5px;
-transition:0.3s;
+  content:'';
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:#60a5fa;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
 }
 
 nav a:hover::after{
-width:100%;
+  width:100%;
+}
+
+/* BOTÓN MOBILE */
+
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
 }
 
 /* =====================
@@ -138,47 +143,47 @@ HERO
 ===================== */
 
 .hero{
-height:80vh;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:30px;
+  height:80vh;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
 }
 
 .hero-content{
-max-width:850px;
-background:rgba(0,0,0,.5);
-padding:45px;
-border-radius:12px;
+  max-width:850px;
+  background:rgba(0,0,0,.5);
+  padding:45px;
+  border-radius:12px;
 }
 
 .hero h1{
-font-size:42px;
-margin-bottom:20px;
+  font-size:42px;
+  margin-bottom:20px;
 }
 
 .hero p{
-font-size:19px;
-line-height:1.6;
+  font-size:19px;
+  line-height:1.6;
 }
 
 .cta{
-margin-top:30px;
+  margin-top:30px;
 }
 
 .cta a{
-background:#2563eb;
-padding:16px 35px;
-border-radius:6px;
-color:white;
-text-decoration:none;
-font-weight:bold;
+  background:#2563eb;
+  padding:16px 35px;
+  border-radius:6px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 /* =====================
@@ -186,43 +191,43 @@ SECCIONES
 ===================== */
 
 .section{
-padding:90px 30px;
-text-align:center;
-max-width:1000px;
-margin:auto;
+  padding:90px 30px;
+  text-align:center;
+  max-width:1000px;
+  margin:auto;
 }
 
 .section h2{
-font-size:34px;
-margin-bottom:25px;
-color:#60a5fa;
+  font-size:34px;
+  margin-bottom:25px;
+  color:#60a5fa;
 }
 
 .section p{
-line-height:1.7;
-margin-bottom:20px;
+  line-height:1.7;
+  margin-bottom:20px;
 }
 
 /* CARDS */
 
 .cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-margin-top:40px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
 }
 
 .card{
-background:#111827;
-padding:30px;
-border-radius:12px;
-width:260px;
+  background:#111827;
+  padding:30px;
+  border-radius:12px;
+  width:260px;
 }
 
 .card h3{
-color:#60a5fa;
-margin-bottom:10px;
+  color:#60a5fa;
+  margin-bottom:10px;
 }
 
 /* =====================
@@ -230,72 +235,91 @@ CTA FINAL
 ===================== */
 
 .cta-section{
-background:#111827;
-padding:90px 30px;
-text-align:center;
-margin-top:60px;
+  background:#111827;
+  padding:90px 30px;
+  text-align:center;
+  margin-top:60px;
 }
 
 .cta-section h2{
-font-size:34px;
-margin-bottom:15px;
+  font-size:34px;
+  margin-bottom:15px;
 }
 
 .btn-cita{
-display:inline-block;
-font-size:20px;
-font-weight:bold;
-padding:18px 45px;
-color:white;
-text-decoration:none;
-border-radius:10px;
-background:#2563eb;
-margin-top:25px;
+  display:inline-block;
+  font-size:20px;
+  font-weight:bold;
+  padding:18px 45px;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  background:#2563eb;
+  margin-top:25px;
 }
 
 /* FOOTER */
 
 footer{
-background:black;
-padding:25px;
-text-align:center;
-margin-top:60px;
-color:#9ca3af;
+  background:black;
+  padding:25px;
+  text-align:center;
+  margin-top:60px;
+  color:#9ca3af;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-padding:16px 22px;
-border-radius:40px;
-color:white;
-text-decoration:none;
-font-weight:bold;
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  padding:16px 22px;
+  border-radius:40px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-/* RESPONSIVE */
+/* =====================
+RESPONSIVE (MOBILE)
+===================== */
 
 @media (max-width:768px){
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
+  .menu-toggle{
+    display:block;
+  }
 
-.hero h1{
-font-size:30px;
-}
+  nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
 
-.cards{
-flex-direction:column;
-align-items:center;
-}
+  nav ul.active{
+    display:flex;
+  }
 
+  nav ul li{
+    margin:12px 0;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .cards{
+    flex-direction:column;
+    align-items:center;
+  }
 }
 
 </style>
@@ -305,117 +329,77 @@ align-items:center;
 <body>
 
 <header>
-
 <nav>
 
-<div class="logo-area">
-<img src="logo.png" alt="DriveRey Logo">
-<h1>DriveRey</h1>
-</div>
+  <div class="logo-area">
+    <img src="logo.png" alt="DriveRey Logo">
+    <h1>DriveRey</h1>
+  </div>
 
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="3experiencia.html">Experiencia</a></li>
-<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
-<li><a href="5vehiculos.html">Vehículos</a></li>
-<li><a href="7autos-prendados.html">Autos prendados</a></li>
-<li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
-<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
-<li><a href="4reseñas.html">Reseñas</a></li>
-</ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="3experiencia.html">Experiencia</a></li>
+    <li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+    <li><a href="5vehiculos.html">Vehículos</a></li>
+    <li><a href="7autos-prendados.html">Autos prendados</a></li>
+    <li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
+    <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+    <li><a href="4reseñas.html">Reseñas</a></li>
+  </ul>
 
 </nav>
-
 </header>
 
 <section class="hero">
-
-<div class="hero-content">
-
-<h1>¿Querés vender un auto prendado?</h1>
-
-<p>
-Si tu vehículo tiene prenda bancaria y no sabés cómo venderlo,
-en DriveRey te ayudamos a gestionar la operación de forma segura
-con compradores que conocen este tipo de transacciones.
-</p>
-
-<div class="cta">
-<a href="https://wa.me/541123283606">Consultar por WhatsApp</a>
-</div>
-
-</div>
-
+  <div class="hero-content">
+    <h1>¿Querés vender un auto prendado?</h1>
+    <p>
+      Si tu vehículo tiene prenda bancaria y no sabés cómo venderlo,
+      en DriveRey te ayudamos a gestionar la operación de forma segura
+      con compradores que conocen este tipo de transacciones.
+    </p>
+    <div class="cta">
+      <a href="https://wa.me/541123283606">Consultar por WhatsApp</a>
+    </div>
+  </div>
 </section>
 
 <section class="section">
-
-<h2>¿Se puede vender un auto prendado?</h2>
-
-<p>
-Sí. Un vehículo prendado puede venderse siempre que se gestione correctamente
-la cancelación de la deuda o la transferencia de la operación.
-</p>
-
-<p>
-Muchas personas creen que no pueden vender su auto hasta terminar de pagar
-la prenda, pero existen formas seguras de realizar la operación.
-</p>
-
+  <h2>¿Se puede vender un auto prendado?</h2>
+  <p>Sí. Un vehículo prendado puede venderse siempre que se gestione correctamente la cancelación de la deuda.</p>
+  <p>Existen formas seguras de realizar la operación sin riesgos.</p>
 </section>
 
 <section class="section">
+  <h2>Cómo funciona la venta</h2>
 
-<h2>Cómo funciona la venta de un auto con prenda</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Evaluación</h3>
-<p>Analizamos la situación de la prenda y el monto pendiente.</p>
-</div>
-
-<div class="card">
-<h3>Publicación</h3>
-<p>Promocionamos el vehículo para encontrar compradores reales.</p>
-</div>
-
-<div class="card">
-<h3>Comprador adecuado</h3>
-<p>Trabajamos con compradores que entienden el proceso de cancelación de prenda.</p>
-</div>
-
-<div class="card">
-<h3>Operación segura</h3>
-<p>Te acompañamos durante todo el proceso hasta cerrar la venta.</p>
-</div>
-
-</div>
-
+  <div class="cards">
+    <div class="card"><h3>Evaluación</h3><p>Analizamos la prenda y el monto pendiente.</p></div>
+    <div class="card"><h3>Publicación</h3><p>Difusión estratégica del vehículo.</p></div>
+    <div class="card"><h3>Comprador adecuado</h3><p>Solo compradores que entienden el proceso.</p></div>
+    <div class="card"><h3>Operación segura</h3><p>Acompañamiento hasta el cierre.</p></div>
+  </div>
 </section>
 
 <section class="cta-section">
-
-<h2>¿Tenés un auto prendado y querés venderlo?</h2>
-
-<p>Podemos evaluar tu caso y explicarte las opciones disponibles.</p>
-
-<a href="https://wa.me/541123283606" class="btn-cita">
-🚗 Hablar por WhatsApp
-</a>
-
+  <h2>¿Tenés un auto prendado?</h2>
+  <p>Evaluamos tu caso y te explicamos las opciones.</p>
+  <a href="https://wa.me/541123283606" class="btn-cita">🚗 Hablar por WhatsApp</a>
 </section>
 
 <footer>
-
-<p>Buenos Aires · Intermediación privada de vehículos</p>
-
+  <p>Buenos Aires · Intermediación privada de vehículos</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/541123283606">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
-
