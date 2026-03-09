@@ -12,7 +12,9 @@
 
 <style>
 
-/* FONDO GENERAL */
+/* =====================
+BASE
+===================== */
 
 body{
 margin:0;
@@ -28,10 +30,12 @@ background-position:center;
 background-attachment:fixed;
 }
 
-/* NAVBAR */
+/* =====================
+NAVBAR (MAESTRA)
+===================== */
 
 header{
-background:linear-gradient(90deg,#0a2a66,#000);
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
 padding:12px 40px;
 display:flex;
 justify-content:center;
@@ -39,7 +43,7 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,0.6);
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
 nav{
@@ -50,7 +54,7 @@ align-items:center;
 justify-content:space-between;
 }
 
-/* LOGO + NOMBRE */
+/* LOGO */
 
 .logo-area{
 display:flex;
@@ -62,14 +66,14 @@ gap:12px;
 width:45px;
 height:45px;
 border-radius:50%;
-box-shadow:0 0 12px rgba(0,140,255,0.8);
+box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
 margin:0;
 font-size:22px;
-color:#00a2ff;
-letter-spacing:1px;
+font-weight:bold;
+color:#60a5fa;
 }
 
 /* MENU */
@@ -77,7 +81,7 @@ letter-spacing:1px;
 nav ul{
 list-style:none;
 display:flex;
-gap:22px;
+gap:25px;
 margin:0;
 padding:0;
 }
@@ -85,19 +89,23 @@ padding:0;
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
+font-size:16px;
 position:relative;
 transition:0.3s;
 }
 
+nav a:hover{
+color:#60a5fa;
+}
+
 nav a::after{
-content:"";
+content:'';
 position:absolute;
-left:0;
-bottom:-6px;
-width:0;
+width:0%;
 height:2px;
-background:#00a2ff;
+background:#60a5fa;
+left:0;
+bottom:-5px;
 transition:0.3s;
 }
 
@@ -105,11 +113,9 @@ nav a:hover::after{
 width:100%;
 }
 
-nav a:hover{
-color:#00a2ff;
-}
-
-/* HERO */
+/* =====================
+HERO
+===================== */
 
 .hero{
 height:350px;
@@ -138,7 +144,9 @@ font-size:18px;
 opacity:0.9;
 }
 
-/* CONTENEDOR */
+/* =====================
+CONTENEDOR
+===================== */
 
 .container{
 max-width:1200px;
@@ -146,7 +154,9 @@ margin:auto;
 padding:60px 20px;
 }
 
-/* GRID VEHICULOS */
+/* =====================
+GRID VEHÍCULOS
+===================== */
 
 .grid-autos{
 display:grid;
@@ -167,7 +177,7 @@ backdrop-filter:blur(6px);
 
 .auto:hover{
 transform:translateY(-8px);
-border:1px solid #00a2ff;
+border:1px solid #60a5fa;
 box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
@@ -184,7 +194,7 @@ padding:20px;
 .auto-info h3{
 margin:0;
 font-size:20px;
-color:#00a2ff;
+color:#60a5fa;
 }
 
 .auto-info p{
@@ -196,14 +206,14 @@ opacity:0.8;
 font-size:24px;
 font-weight:bold;
 margin:12px 0;
-color:#00a2ff;
+color:#60a5fa;
 }
 
-/* BOTON */
+/* BOTÓN */
 
 .boton{
 display:inline-block;
-background:linear-gradient(45deg,#0077ff,#00a2ff);
+background:linear-gradient(45deg,#2563eb,#3b82f6);
 color:white;
 padding:12px 25px;
 text-decoration:none;
@@ -214,10 +224,12 @@ transition:0.3s;
 
 .boton:hover{
 transform:scale(1.05);
-box-shadow:0 10px 25px rgba(0,162,255,0.6);
+box-shadow:0 10px 25px rgba(37,99,235,0.6);
 }
 
-/* FOOTER */
+/* =====================
+FOOTER
+===================== */
 
 footer{
 background:#000;
@@ -225,6 +237,7 @@ text-align:center;
 padding:30px;
 margin-top:60px;
 border-top:1px solid #222;
+color:#9ca3af;
 }
 
 </style>
@@ -259,20 +272,16 @@ border-top:1px solid #222;
 
 </header>
 
-
 <section class="hero">
 
 <h1>Vehículos Disponibles</h1>
-
 <p>Autos seleccionados para venta rápida y segura</p>
 
 </section>
 
-
 <section class="container">
 
 <div class="grid-autos">
-
 
 <div class="auto">
 <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
@@ -284,7 +293,6 @@ border-top:1px solid #222;
 </div>
 </div>
 
-
 <div class="auto">
 <img src="https://images.unsplash.com/photo-1617814076668-36c5b7e8e8bb">
 <div class="auto-info">
@@ -295,7 +303,6 @@ border-top:1px solid #222;
 </div>
 </div>
 
-
 <div class="auto">
 <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a">
 <div class="auto-info">
@@ -305,7 +312,6 @@ border-top:1px solid #222;
 <a class="boton" href="https://wa.me/541123283606">Consultar</a>
 </div>
 </div>
-
 
 <div class="auto">
 <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
@@ -321,19 +327,16 @@ border-top:1px solid #222;
 
 </section>
 
-
 <footer>
 
 <p>Intermediación privada de vehículos</p>
-
 <p>General Pacheco · Buenos Aires</p>
-
 <p>WhatsApp: 11 2328 3606</p>
 
 </footer>
 
 </body>
-
 </html>
+
 
 
