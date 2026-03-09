@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,7 +11,9 @@
 
 <style>
 
-/* FONDO CON FOTO */
+/* =====================
+BASE
+===================== */
 
 body{
 margin:0;
@@ -26,10 +29,12 @@ background-position:center;
 background-attachment:fixed;
 }
 
-/* NAVBAR */
+/* =====================
+NAVBAR (MAESTRA)
+===================== */
 
 header{
-background:linear-gradient(90deg,#0a2a66,#000);
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
 padding:12px 40px;
 display:flex;
 justify-content:center;
@@ -37,7 +42,7 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,0.6);
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
 nav{
@@ -60,14 +65,14 @@ gap:12px;
 width:45px;
 height:45px;
 border-radius:50%;
-box-shadow:0 0 12px rgba(0,140,255,0.8);
+box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
 margin:0;
 font-size:22px;
-color:#00a2ff;
-letter-spacing:1px;
+font-weight:bold;
+color:#60a5fa;
 }
 
 /* MENU */
@@ -75,7 +80,7 @@ letter-spacing:1px;
 nav ul{
 list-style:none;
 display:flex;
-gap:22px;
+gap:25px;
 margin:0;
 padding:0;
 }
@@ -83,20 +88,23 @@ padding:0;
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
+font-size:16px;
 position:relative;
 transition:0.3s;
-font-size:15px;
+}
+
+nav a:hover{
+color:#60a5fa;
 }
 
 nav a::after{
-content:"";
+content:'';
 position:absolute;
-left:0;
-bottom:-6px;
-width:0;
+width:0%;
 height:2px;
-background:#00a2ff;
+background:#60a5fa;
+left:0;
+bottom:-5px;
 transition:0.3s;
 }
 
@@ -104,19 +112,19 @@ nav a:hover::after{
 width:100%;
 }
 
-nav a:hover{
-color:#00a2ff;
-}
-
-/* HERO */
+/* =====================
+HERO
+===================== */
 
 .hero{
 height:320px;
 background-image:
 linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
 url('https://images.unsplash.com/photo-1549921296-3a6b7f7b53f1');
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -129,7 +137,9 @@ padding:20px;
 border-radius:8px;
 }
 
-/* CONTENEDOR */
+/* =====================
+CONTENEDOR
+===================== */
 
 .container{
 max-width:1100px;
@@ -145,10 +155,12 @@ backdrop-filter:blur(5px);
 text-align:center;
 font-size:32px;
 margin-bottom:50px;
-color:#00a2ff;
+color:#60a5fa;
 }
 
-/* RESEÑAS */
+/* =====================
+RESEÑAS
+===================== */
 
 .grid{
 display:grid;
@@ -167,11 +179,11 @@ backdrop-filter:blur(4px);
 
 .review:hover{
 transform:translateY(-5px);
-border:1px solid #00a2ff;
+border:1px solid #60a5fa;
 }
 
 .review h3{
-color:#00a2ff;
+color:#60a5fa;
 margin-bottom:10px;
 }
 
@@ -185,7 +197,9 @@ color:#ffd700;
 margin-bottom:10px;
 }
 
-/* CTA */
+/* =====================
+CTA
+===================== */
 
 .cta{
 text-align:center;
@@ -194,23 +208,25 @@ margin-top:80px;
 
 .cta a{
 display:inline-block;
-background:linear-gradient(45deg,#0077ff,#00a2ff);
+background:linear-gradient(45deg,#2563eb,#3b82f6);
 color:white;
 padding:18px 50px;
 text-decoration:none;
 border-radius:40px;
 font-weight:bold;
 font-size:20px;
-box-shadow:0 10px 25px rgba(0,119,255,0.5);
+box-shadow:0 10px 25px rgba(37,99,235,0.6);
 transition:0.3s;
 }
 
 .cta a:hover{
 transform:scale(1.08);
-box-shadow:0 15px 35px rgba(0,162,255,0.8);
+box-shadow:0 15px 35px rgba(37,99,235,0.9);
 }
 
-/* FOOTER */
+/* =====================
+FOOTER
+===================== */
 
 footer{
 background:#000;
@@ -218,9 +234,11 @@ text-align:center;
 padding:30px;
 margin-top:60px;
 border-top:1px solid #222;
+color:#9ca3af;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -251,13 +269,9 @@ border-top:1px solid #222;
 
 </header>
 
-
 <section class="hero">
-
 <h1>Lo que dicen nuestros clientes</h1>
-
 </section>
-
 
 <div class="container">
 
@@ -328,7 +342,6 @@ Todo muy profesional.
 <div class="cta">
 
 <h2>¿Querés vender tu vehículo?</h2>
-
 <p>Coordiná una cita para evaluar tu auto.</p>
 
 <a href="https://wa.me/541123283606">Coordinar una cita</a>
@@ -336,7 +349,6 @@ Todo muy profesional.
 </div>
 
 </div>
-
 
 <footer>
 
@@ -348,7 +360,7 @@ General Pacheco · Buenos Aires
 </footer>
 
 </body>
-
 </html>
+
 
 
