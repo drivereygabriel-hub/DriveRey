@@ -24,32 +24,29 @@ color:white;
 scroll-behavior:smooth;
 }
 
-/* NAVBAR */
+/* =====================
+NAVBAR MAESTRA
+===================== */
 
-nav{
+header{
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+padding:12px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
 position:sticky;
 top:0;
-z-index:999;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
+}
 
-background:linear-gradient(90deg,#000,#1e3a8a,#000);
-background-size:200% 200%;
-animation:gradientMove 6s infinite alternate;
-
-padding:12px 40px;
-
-box-shadow:0 5px 25px rgba(0,0,0,0.6);
-
+nav{
+width:100%;
+max-width:1200px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
-
-@keyframes gradientMove{
-0%{background-position:left}
-100%{background-position:right}
-}
-
-/* LOGO */
 
 .logo-area{
 display:flex;
@@ -61,37 +58,54 @@ gap:12px;
 width:45px;
 height:45px;
 border-radius:50%;
-box-shadow:0 0 12px rgba(96,165,250,0.9);
+box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
+margin:0;
 font-size:22px;
+font-weight:bold;
 color:#60a5fa;
 }
 
 /* MENU */
 
 nav ul{
-display:flex;
-gap:35px;
 list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 font-size:16px;
-padding:8px 14px;
-border-radius:6px;
-transition:.3s;
+position:relative;
+transition:0.3s;
 }
 
 nav a:hover{
-background:rgba(59,130,246,0.25);
 color:#60a5fa;
 }
 
-/* BOTON HAMBURGUESA */
+nav a::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#60a5fa;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* BOTON MOBILE */
 
 .menu-toggle{
 display:none;
@@ -102,7 +116,6 @@ cursor:pointer;
 /* HERO */
 
 .hero{
-
 height:95vh;
 
 background:
@@ -116,19 +129,15 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
 padding:30px;
-
 }
 
 .hero-content{
-
 max-width:850px;
 background:rgba(0,0,0,.5);
 padding:45px;
 border-radius:12px;
 backdrop-filter:blur(6px);
-
 }
 
 .hero h1{
@@ -246,8 +255,6 @@ font-size:18px;
 margin-bottom:25px;
 }
 
-/* BOTON CTA */
-
 .btn-cita{
 display:inline-block;
 font-size:22px;
@@ -257,14 +264,7 @@ color:white;
 text-decoration:none;
 border-radius:12px;
 background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
-background-size:200% 200%;
-animation:btnGradient 4s infinite alternate;
 box-shadow:0 10px 35px rgba(37,99,235,0.6);
-}
-
-@keyframes btnGradient{
-0%{background-position:left}
-100%{background-position:right}
 }
 
 /* FOOTER */
@@ -333,7 +333,7 @@ font-size:16px;
 
 <body>
 
-<!-- NAVBAR -->
+<header>
 
 <nav>
 
@@ -342,9 +342,7 @@ font-size:16px;
 <h1>DriveRey</h1>
 </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-☰
-</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
 <ul id="menu">
 
@@ -361,7 +359,7 @@ font-size:16px;
 
 </nav>
 
-<!-- HERO -->
+</header>
 
 <section class="hero">
 
@@ -476,5 +474,6 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
+
 
 
