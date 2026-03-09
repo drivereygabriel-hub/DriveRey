@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -14,286 +13,292 @@
 
 <style>
 
+/* =====================
+RESET / BASE
+===================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#0f172a;
-color:white;
-scroll-behavior:smooth;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#0f172a;
+  color:white;
+  scroll-behavior:smooth;
 }
 
 /* =====================
-NAVBAR MAESTRA
+NAVBAR (MAESTRA)
 ===================== */
 
 header{
-background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
-padding:12px 40px;
-display:flex;
-justify-content:center;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 5px 20px rgba(0,0,0,0.6);
+  background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+  padding:12px 40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
 nav{
-width:100%;
-max-width:1200px;
-display:flex;
-align-items:center;
-justify-content:space-between;
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
+/* LOGO */
+
 .logo-area{
-display:flex;
-align-items:center;
-gap:12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
 .logo-area img{
-width:45px;
-height:45px;
-border-radius:50%;
-box-shadow:0 0 12px rgba(96,165,250,0.8);
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
-margin:0;
-font-size:22px;
-font-weight:bold;
-color:#60a5fa;
+  font-size:22px;
+  font-weight:bold;
+  color:#60a5fa;
 }
 
+/* MENU */
+
 nav ul{
-list-style:none;
-display:flex;
-gap:25px;
-margin:0;
-padding:0;
+  list-style:none;
+  display:flex;
+  gap:25px;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-font-size:16px;
-position:relative;
-transition:0.3s;
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  position:relative;
+  transition:0.3s;
 }
 
 nav a:hover{
-color:#60a5fa;
+  color:#60a5fa;
 }
 
 nav a::after{
-content:'';
-position:absolute;
-width:0%;
-height:2px;
-background:#60a5fa;
-left:0;
-bottom:-5px;
-transition:0.3s;
+  content:'';
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:#60a5fa;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
 }
 
 nav a:hover::after{
-width:100%;
+  width:100%;
 }
 
-/* HERO */
+/* BOTÓN MOBILE */
+
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* =====================
+HERO
+===================== */
 
 .hero{
-
-height:80vh;
-
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-
-padding:30px;
-
+  height:80vh;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
 }
 
 .hero-content{
-
-max-width:850px;
-background:rgba(0,0,0,.55);
-padding:45px;
-border-radius:12px;
-
+  max-width:850px;
+  background:rgba(0,0,0,.55);
+  padding:45px;
+  border-radius:12px;
 }
 
 .hero h1{
-font-size:44px;
-margin-bottom:20px;
+  font-size:44px;
+  margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
-line-height:1.6;
+  font-size:18px;
+  line-height:1.6;
 }
 
-/* SECCIONES */
+/* =====================
+SECCIONES
+===================== */
 
 .section{
-padding:90px 30px;
-text-align:center;
-max-width:1000px;
-margin:auto;
+  padding:90px 30px;
+  text-align:center;
+  max-width:1000px;
+  margin:auto;
 }
 
 .section h2{
-font-size:34px;
-margin-bottom:25px;
-color:#60a5fa;
+  font-size:34px;
+  margin-bottom:25px;
+  color:#60a5fa;
 }
 
 .section p{
-line-height:1.7;
-margin-bottom:20px;
+  line-height:1.7;
+  margin-bottom:20px;
 }
 
 /* CARDS */
 
 .cards{
-
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
 }
 
 .card{
-
-background:#111827;
-padding:30px;
-border-radius:12px;
-width:260px;
-transition:.4s;
-
+  background:#111827;
+  padding:30px;
+  border-radius:12px;
+  width:260px;
+  transition:.4s;
 }
 
 .card:hover{
-
-transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,.6);
-
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
 }
 
 .card h3{
-color:#60a5fa;
-margin-bottom:10px;
+  color:#60a5fa;
+  margin-bottom:10px;
 }
 
-/* CTA FINAL */
+/* =====================
+CTA FINAL
+===================== */
 
 .cta-section{
-
-background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-url("https://images.unsplash.com/photo-1493238792000-8113da705763");
-
-background-size:cover;
-background-position:center;
-
-padding:100px 30px;
-text-align:center;
-
+  background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1493238792000-8113da705763");
+  background-size:cover;
+  background-position:center;
+  padding:100px 30px;
+  text-align:center;
 }
 
 .cta-section h2{
-font-size:36px;
-margin-bottom:15px;
+  font-size:36px;
+  margin-bottom:15px;
 }
 
 .cta-section p{
-font-size:18px;
-margin-bottom:25px;
+  font-size:18px;
+  margin-bottom:25px;
 }
 
 .btn-cita{
-
-display:inline-block;
-
-font-size:22px;
-font-weight:bold;
-
-padding:20px 50px;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:12px;
-
-background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
-
+  display:inline-block;
+  font-size:22px;
+  font-weight:bold;
+  padding:20px 50px;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
 }
 
 /* FOOTER */
 
 footer{
-background:black;
-padding:25px;
-text-align:center;
+  background:black;
+  padding:25px;
+  text-align:center;
+  color:#9ca3af;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
-
-position:fixed;
-bottom:25px;
-right:25px;
-
-background:#25D366;
-
-padding:16px 22px;
-
-border-radius:40px;
-
-color:white;
-
-font-weight:bold;
-
-text-decoration:none;
-
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  padding:16px 22px;
+  border-radius:40px;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
 }
 
-/* RESPONSIVE */
+/* =====================
+RESPONSIVE (MOBILE)
+===================== */
 
 @media (max-width:768px){
 
-nav ul{
-flex-wrap:wrap;
-gap:15px;
-}
+  .menu-toggle{
+    display:block;
+  }
 
-.hero h1{
-font-size:30px;
-}
+  nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
 
-.cards{
-flex-direction:column;
-align-items:center;
-}
+  nav ul.active{
+    display:flex;
+  }
 
+  nav ul li{
+    margin:12px 0;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .cards{
+    flex-direction:column;
+    align-items:center;
+  }
 }
 
 </style>
@@ -303,136 +308,80 @@ align-items:center;
 <body>
 
 <header>
-
 <nav>
 
-<div class="logo-area">
-<img src="logo.png">
-<h1>DriveRey</h1>
-</div>
+  <div class="logo-area">
+    <img src="logo.png" alt="DriveRey Logo">
+    <h1>DriveRey</h1>
+  </div>
 
-<ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<li><a href="index.html">Inicio</a></li>
-<li><a href="3experiencia.html">Experiencia</a></li>
-<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
-<li><a href="5vehiculos.html">Vehículos</a></li>
-<li><a href="7autos-prendados.html">Autos prendados</a></li>
-<li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
-<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
-<li><a href="4reseñas.html">Reseñas</a></li>
-
-</ul>
+  <ul id="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="3experiencia.html">Experiencia</a></li>
+    <li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+    <li><a href="5vehiculos.html">Vehículos</a></li>
+    <li><a href="7autos-prendados.html">Autos prendados</a></li>
+    <li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
+    <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+    <li><a href="4reseñas.html">Reseñas</a></li>
+  </ul>
 
 </nav>
-
 </header>
 
 <section class="hero">
-
-<div class="hero-content">
-
-<h1>Autos 0 km adjudicados</h1>
-
-<p>
-Un auto adjudicado es un vehículo que proviene de un plan de ahorro
-que ya fue adjudicado y tiene asignada la unidad 0 km.
-Muchas personas venden estos planes o adjudicaciones antes de retirar el vehículo.
-</p>
-
-</div>
-
+  <div class="hero-content">
+    <h1>Autos 0 km adjudicados</h1>
+    <p>
+      Un auto adjudicado proviene de un plan de ahorro que ya fue adjudicado
+      y tiene asignada la unidad 0 km, aunque puede tener cuotas pendientes.
+    </p>
+  </div>
 </section>
 
 <section class="section">
-
-<h2>¿Qué es un auto adjudicado?</h2>
-
-<p>
-Un auto adjudicado es un vehículo que proviene de un plan de ahorro
-que ya fue adjudicado mediante sorteo o licitación.
-Esto significa que el titular del plan ya tiene derecho a retirar el vehículo 0 km,
-aunque todavía pueden quedar cuotas por pagar.
-</p>
-
-<p>
-Muchas personas deciden vender su plan adjudicado porque necesitan el dinero,
-no quieren continuar pagando las cuotas o prefieren cambiar de vehículo.
-</p>
-
+  <h2>¿Qué es un auto adjudicado?</h2>
+  <p>Es un vehículo cuyo plan de ahorro ya fue adjudicado por sorteo o licitación.</p>
+  <p>El titular tiene derecho a retirar el vehículo, aunque resten cuotas.</p>
 </section>
 
 <section class="section">
+  <h2>Cómo funciona la operación</h2>
 
-<h2>Cómo funciona la compra o venta de un adjudicado</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Plan adjudicado</h3>
-<p>El titular ya obtuvo el derecho de retirar el vehículo dentro del plan de ahorro.</p>
-</div>
-
-<div class="card">
-<h3>Transferencia</h3>
-<p>El plan puede transferirse a otra persona que continuará con las cuotas restantes.</p>
-</div>
-
-<div class="card">
-<h3>Entrega del vehículo</h3>
-<p>Una vez completados los requisitos del plan, se puede retirar el vehículo 0 km.</p>
-</div>
-
-<div class="card">
-<h3>Operación segura</h3>
-<p>Es importante realizar la operación correctamente para evitar problemas administrativos.</p>
-</div>
-
-</div>
-
+  <div class="cards">
+    <div class="card"><h3>Plan adjudicado</h3><p>El titular ya tiene derecho al vehículo.</p></div>
+    <div class="card"><h3>Transferencia</h3><p>El plan puede transferirse legalmente.</p></div>
+    <div class="card"><h3>Entrega</h3><p>Se retira el vehículo al cumplir los requisitos.</p></div>
+    <div class="card"><h3>Operación segura</h3><p>Acompañamiento durante todo el proceso.</p></div>
+  </div>
 </section>
 
 <section class="section">
-
-<h2>Ventajas de comprar un adjudicado</h2>
-
-<p>
-Comprar un plan adjudicado puede permitir acceder a un vehículo 0 km
-sin tener que esperar el sorteo del plan.
-</p>
-
-<p>
-También puede representar una oportunidad para adquirir un auto nuevo
-con condiciones financieras diferentes a una compra tradicional.
-</p>
-
+  <h2>Ventajas de un adjudicado</h2>
+  <p>Accedés a un 0 km sin esperar el sorteo.</p>
+  <p>Alternativa financiera distinta a una compra tradicional.</p>
 </section>
 
 <section class="cta-section">
-
-<h2>¿Querés vender o comprar un adjudicado?</h2>
-
-<p>
-Podemos analizar tu caso y ayudarte a encontrar compradores
-o personas interesadas en este tipo de operaciones.
-</p>
-
-<a href="https://wa.me/541123283606" class="btn-cita">
-🚗 Consultar por WhatsApp
-</a>
-
+  <h2>¿Querés vender o comprar un adjudicado?</h2>
+  <p>Analizamos tu caso y te asesoramos.</p>
+  <a href="https://wa.me/541123283606" class="btn-cita">🚗 Consultar por WhatsApp</a>
 </section>
 
 <footer>
-
-<p>Buenos Aires · Intermediación privada de vehículos</p>
-
+  <p>Buenos Aires · Intermediación privada de vehículos</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/541123283606">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
-
 </html>
+
