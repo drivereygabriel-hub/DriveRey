@@ -5,161 +5,295 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vehículos disponibles | DriveRey</title>
-
-<meta name="description" content="Sección de vehículos en desarrollo. Próximamente vas a poder ver los autos disponibles en DriveRey.">
-
+<title>Vehículos en Venta | DriveRey</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<meta name="description" content="Autos seleccionados en venta en Buenos Aires. Intermediación privada, consignación y venta segura de vehículos.">
 
 <style>
 
 /* =====================
-RESET / BASE
+BASE
 ===================== */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
 body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:#0f172a;
-  color:white;
-  scroll-behavior:smooth;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+background-image:
+linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+overscroll-behavior-y: contain;
 }
 
 /* =====================
-NAVBAR (MAESTRA)
+NAVBAR (SIN CAMBIOS)
 ===================== */
 
 header{
-  background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
-  padding:12px 40px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 5px 20px rgba(0,0,0,0.6);
+background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
+padding:12px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
 nav{
-  width:100%;
-  max-width:1200px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+width:100%;
+max-width:1200px;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
 .logo-area{
-  display:flex;
-  align-items:center;
-  gap:12px;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
 .logo-area img{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  box-shadow:0 0 12px rgba(96,165,250,0.8);
+width:45px;
+height:45px;
+border-radius:50%;
+box-shadow:0 0 12px rgba(96,165,250,0.8);
 }
 
 .logo-area h1{
-  font-size:22px;
-  font-weight:bold;
-  color:#60a5fa;
+margin:0;
+font-size:22px;
+font-weight:bold;
+color:#60a5fa;
 }
 
 nav ul{
-  list-style:none;
-  display:flex;
-  gap:25px;
+list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
-  font-size:16px;
-  position:relative;
-  transition:.3s;
+color:white;
+text-decoration:none;
+font-size:16px;
+position:relative;
+transition:0.3s;
 }
 
-nav a:hover{
-  color:#60a5fa;
-}
+nav a:hover{ color:#60a5fa; }
 
 nav a::after{
-  content:'';
-  position:absolute;
-  width:0%;
-  height:2px;
-  background:#60a5fa;
-  left:0;
-  bottom:-5px;
-  transition:.3s;
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#60a5fa;
+left:0;
+bottom:-5px;
+transition:0.3s;
 }
 
-nav a:hover::after{
-  width:100%;
+nav a:hover::after{ width:100%; }
+
+/* =====================
+HERO
+===================== */
+
+.hero{
+height:350px;
+background-image:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
-.menu-toggle{
-  display:none;
-  font-size:30px;
-  cursor:pointer;
+.hero h1{ font-size:42px; margin-bottom:10px; }
+.hero p{ font-size:18px; opacity:0.9; }
+
+/* =====================
+CONTENEDOR
+===================== */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+.grid-autos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 /* =====================
-PÁGINA EN DESARROLLO
+TARJETA AUTO
 ===================== */
 
-.dev-section{
-  min-height:85vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
+.auto{
+background:rgba(20,20,20,0.9);
+border-radius:10px;
+overflow:hidden;
+border:1px solid #222;
+transition:0.35s;
+backdrop-filter:blur(6px);
 }
 
-.dev-box{
-  max-width:700px;
-  background:#111827;
-  padding:60px 40px;
-  border-radius:16px;
-  box-shadow:0 15px 40px rgba(0,0,0,.6);
+.auto:hover{
+transform:translateY(-8px);
+border:1px solid #60a5fa;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
-.dev-box h1{
-  font-size:42px;
-  margin-bottom:20px;
-  color:#60a5fa;
+/* =====================
+CAROUSEL
+===================== */
+
+.carousel{
+height:200px;
+overflow:hidden;
+position:relative;
 }
 
-.dev-box p{
-  font-size:18px;
-  line-height:1.7;
-  margin-bottom:20px;
+.carousel-track{
+display:flex;
+transition:transform 0.4s ease;
 }
 
-.dev-icon{
-  font-size:60px;
-  margin-bottom:20px;
+.carousel img{
+width:100%;
+height:200px;
+object-fit:cover;
+flex-shrink:0;
 }
 
-.btn-whatsapp{
-  display:inline-block;
-  margin-top:25px;
-  padding:18px 45px;
-  font-size:20px;
-  font-weight:bold;
-  color:white;
-  text-decoration:none;
-  border-radius:10px;
-  background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
+/* Flechas desktop */
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
+color:white;
+border:none;
+font-size:20px;
+padding:8px 12px;
+cursor:pointer;
+z-index:5;
+}
+
+.arrow.left{ left:5px; }
+.arrow.right{ right:5px; }
+
+@media(max-width:768px){
+.arrow{ display:none; }
+}
+
+/* Dots */
+.dots{
+display:flex;
+justify-content:center;
+gap:6px;
+position:absolute;
+bottom:8px;
+width:100%;
+}
+
+.dots span{
+width:8px;
+height:8px;
+background:#6b7280;
+border-radius:50%;
+cursor:pointer;
+}
+
+.dots span.active{
+background:#60a5fa;
+}
+
+/* =====================
+INFO
+===================== */
+
+.auto-info{
+padding:20px;
+}
+
+.auto-info h3{
+margin:0;
+font-size:20px;
+color:#60a5fa;
+}
+
+.auto-info p{
+margin:8px 0;
+opacity:0.8;
+}
+
+.precio{
+font-size:24px;
+font-weight:bold;
+margin:12px 0;
+color:#60a5fa;
+}
+
+/* =====================
+BOTONES
+===================== */
+
+.acciones{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.boton{
+background:linear-gradient(45deg,#2563eb,#3b82f6);
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:0.3s;
+border:none;
+cursor:pointer;
+}
+
+.boton:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(37,99,235,0.6);
+}
+
+.boton-ficha{
+background:#111827;
+border:1px solid #60a5fa;
+color:#60a5fa;
+}
+
+/* =====================
+FICHA TECNICA
+===================== */
+
+.ficha{
+display:none;
+margin-top:10px;
+font-size:14px;
+opacity:0.85;
 }
 
 /* =====================
@@ -167,67 +301,38 @@ FOOTER
 ===================== */
 
 footer{
-  background:black;
-  padding:25px;
-  text-align:center;
-  color:#9ca3af;
+background:#000;
+text-align:center;
+padding:30px;
+margin-top:60px;
+border-top:1px solid #222;
+color:#9ca3af;
 }
 
-/* WHATSAPP */
-
-.whatsapp{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:#25D366;
-  padding:16px 22px;
-  border-radius:40px;
-  color:white;
-  font-weight:bold;
-  text-decoration:none;
+.menu-toggle{
+display:none;
+font-size:30px;
+cursor:pointer;
 }
-
-/* =====================
-RESPONSIVE
-===================== */
 
 @media (max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
-  nav ul{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#000;
-    flex-direction:column;
-    align-items:center;
-    display:none;
-    padding:20px 0;
-  }
-
-  nav ul.active{
-    display:flex;
-  }
-
-  nav ul li{
-    margin:12px 0;
-  }
-
-  .dev-box h1{
-    font-size:32px;
-  }
-
-  .dev-box p{
-    font-size:16px;
-  }
+.menu-toggle{display:block;}
+nav ul{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#000;
+flex-direction:column;
+align-items:center;
+display:none;
+padding:20px 0;
+}
+nav ul.active{display:flex;}
+nav ul li{margin:12px 0;}
 }
 
 </style>
-
 </head>
 
 <body>
@@ -235,55 +340,203 @@ RESPONSIVE
 <header>
 <nav>
 
-  <div class="logo-area">
-    <img src="logo.png" alt="DriveRey Logo">
-    <h1>DriveRey</h1>
-  </div>
+<div class="logo-area">
+<img src="logo.png" loading="lazy">
+<h1>DriveRey</h1>
+</div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-  <ul id="menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="3experiencia.html">Experiencia</a></li>
-    <li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
-    <li><a href="5vehiculos.html">Vehículos</a></li>
-    <li><a href="7autos-prendados.html">Autos prendados</a></li>
-    <li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
-    <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
-    <li><a href="4reseñas.html">Reseñas</a></li>
-  </ul>
+<ul id="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="3experiencia.html">Experiencia</a></li>
+<li><a href="6forma-de-trabajo.html">Forma de trabajo</a></li>
+<li><a href="5vehiculos.html">Vehículos</a></li>
+<li><a href="7autos-prendados.html">Autos prendados</a></li>
+<li><a href="8autos-adjudicados.html">0km adjudicados</a></li>
+<li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
+<li><a href="4reseñas.html">Reseñas</a></li>
+</ul>
 
 </nav>
 </header>
 
-<section class="dev-section">
-  <div class="dev-box">
-    <div class="dev-icon">🚧</div>
-    <h1>Sección en desarrollo</h1>
-    <p>
-      Estamos trabajando para mostrarte todos los vehículos disponibles
-      de forma clara y ordenada.
-    </p>
-    <p>
-      Mientras tanto, podés consultarnos directamente y te enviamos
-      las opciones disponibles según tu necesidad.
-    </p>
-    <a href="https://wa.me/541123283606" class="btn-whatsapp">
-      Consultar por WhatsApp
-    </a>
-  </div>
+<section class="hero">
+<h1>Vehículos Disponibles</h1>
+<p>Autos seleccionados para venta rápida y segura</p>
+</section>
+
+<section class="container">
+<div class="grid-autos">
+
+<!-- RAM -->
+<div class="auto">
+<div class="carousel" data-autoplay="true">
+<button class="arrow left">&#8249;</button>
+<button class="arrow right">&#8250;</button>
+<div class="carousel-track">
+<img src="ram_1500_2016.png" loading="lazy">
+<img src="ram_1500_2016.png" loading="lazy">
+<img src="ram_1500_2016.png" loading="lazy">
+</div>
+<div class="dots"></div>
+</div>
+<div class="auto-info">
+<h3>Ram 1500 Laramie 5.7 V8 4x4 2016</h3>
+<p>124.000 km</p>
+<div class="precio">USD 34.000</div>
+<div class="acciones">
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+<button class="boton boton-ficha">Ficha técnica</button>
+</div>
+<div class="ficha">V8 5.7 · 4x4 · Automática · Full</div>
+</div>
+</div>
+
+<!-- RANGER -->
+<div class="auto">
+<div class="carousel" data-autoplay="true">
+<button class="arrow left">&#8249;</button>
+<button class="arrow right">&#8250;</button>
+<div class="carousel-track">
+<img src="Ranger_2021_baku.png" loading="lazy">
+<img src="Ranger_2021_baku.png" loading="lazy">
+<img src="Ranger_2021_baku.png" loading="lazy">
+</div>
+<div class="dots"></div>
+</div>
+<div class="auto-info">
+<h3>Ford Ranger 3.2 Cd Limited 2021</h3>
+<p>89.000 km</p>
+<div class="precio">USD 31.000</div>
+<div class="acciones">
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+<button class="boton boton-ficha">Ficha técnica</button>
+</div>
+<div class="ficha">3.2 · Automática · 4x4 · Full</div>
+</div>
+</div>
+
+<!-- AMAROK -->
+<div class="auto">
+<div class="carousel" data-autoplay="true">
+<button class="arrow left">&#8249;</button>
+<button class="arrow right">&#8250;</button>
+<div class="carousel-track">
+<img src="Amarok_v6_2019.png" loading="lazy">
+<img src="Amarok_v6_2019.png" loading="lazy">
+<img src="Amarok_v6_2019.png" loading="lazy">
+</div>
+<div class="dots"></div>
+</div>
+<div class="auto-info">
+<h3>Volkswagen Amarok V6 Extreme 2019</h3>
+<p>30.000 km</p>
+<div class="precio">USD 40.000</div>
+<div class="acciones">
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+<button class="boton boton-ficha">Ficha técnica</button>
+</div>
+<div class="ficha">V6 · 258cv · Automática · 4Motion</div>
+</div>
+</div>
+
+<!-- TIGGO -->
+<div class="auto">
+<div class="carousel" data-autoplay="true">
+<button class="arrow left">&#8249;</button>
+<button class="arrow right">&#8250;</button>
+<div class="carousel-track">
+<img src="chery_tiggo_2017.png" loading="lazy">
+<img src="chery_tiggo_2017.png" loading="lazy">
+<img src="chery_tiggo_2017.png" loading="lazy">
+</div>
+<div class="dots"></div>
+</div>
+<div class="auto-info">
+<h3>Chery Tiggo 5 Luxury CVT 2017</h3>
+<p>95.000 km</p>
+<div class="precio">USD 14.300</div>
+<div class="acciones">
+<a class="boton" href="https://wa.me/541123283606">Consultar</a>
+<button class="boton boton-ficha">Ficha técnica</button>
+</div>
+<div class="ficha">2.0 · CVT · Full</div>
+</div>
+</div>
+
+</div>
 </section>
 
 <footer>
-  <p>Buenos Aires · Intermediación privada de vehículos</p>
+<p>Intermediación privada de vehículos</p>
+<p>General Pacheco · Buenos Aires</p>
+<p>WhatsApp: 11 2328 3606</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
-
 <script>
+
+/* MENU */
 function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
+document.getElementById("menu").classList.toggle("active");
 }
+
+/* FICHA TECNICA */
+document.querySelectorAll(".boton-ficha").forEach(btn=>{
+btn.addEventListener("click",()=>{
+let ficha=btn.parentElement.nextElementSibling;
+ficha.style.display=ficha.style.display==="block"?"none":"block";
+});
+});
+
+/* CAROUSEL LOGICA COMPLETA */
+document.querySelectorAll(".carousel").forEach(carousel=>{
+const track=carousel.querySelector(".carousel-track");
+const imgs=track.children;
+const dots=carousel.querySelector(".dots");
+let index=0;
+
+/* dots */
+for(let i=0;i<imgs.length;i++){
+const d=document.createElement("span");
+if(i===0) d.classList.add("active");
+d.onclick=()=>move(i);
+dots.appendChild(d);
+}
+
+function move(i){
+index=i;
+track.style.transform=`translateX(-${i*100}%)`;
+dots.querySelectorAll("span").forEach((d,idx)=>{
+d.classList.toggle("active",idx===i);
+});
+}
+
+/* arrows */
+carousel.querySelector(".left").onclick=()=>{
+index=index>0?index-1:imgs.length-1;
+move(index);
+};
+carousel.querySelector(".right").onclick=()=>{
+index=index<imgs.length-1?index+1:0;
+move(index);
+};
+
+/* swipe */
+let startX=0;
+carousel.addEventListener("touchstart",e=>startX=e.touches[0].clientX,{passive:true});
+carousel.addEventListener("touchend",e=>{
+let dx=e.changedTouches[0].clientX-startX;
+if(dx<-50) carousel.querySelector(".right").click();
+if(dx>50) carousel.querySelector(".left").click();
+});
+
+/* autoplay solo desktop */
+if(window.innerWidth>768){
+setInterval(()=>carousel.querySelector(".right").click(),4500);
+}
+});
+
 </script>
 
 </body>
