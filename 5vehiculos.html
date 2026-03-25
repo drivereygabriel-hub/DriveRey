@@ -166,8 +166,8 @@ CAROUSEL
 
 .carousel{
 height:200px;
-overflow:hidden;
 position:relative;
+overflow:hidden;
 }
 
 .carousel-track{
@@ -182,46 +182,39 @@ object-fit:cover;
 flex-shrink:0;
 }
 
-/* Flechas desktop */
 .arrow{
 position:absolute;
 top:50%;
 transform:translateY(-50%);
 background:rgba(0,0,0,0.6);
-color:white;
 border:none;
-font-size:20px;
-padding:8px 12px;
+color:white;
+font-size:22px;
+padding:6px 10px;
 cursor:pointer;
-z-index:5;
+z-index:2;
 }
 
-.arrow.left{ left:5px; }
-.arrow.right{ right:5px; }
+.arrow.left{ left:8px; }
+.arrow.right{ right:8px; }
 
-@media(max-width:768px){
-.arrow{ display:none; }
-}
+/* DOTS */
 
-/* Dots */
 .dots{
 display:flex;
 justify-content:center;
 gap:6px;
-position:absolute;
-bottom:8px;
-width:100%;
+margin-top:6px;
 }
 
-.dots span{
+.dot{
 width:8px;
 height:8px;
-background:#6b7280;
 border-radius:50%;
-cursor:pointer;
+background:#555;
 }
 
-.dots span.active{
+.dot.active{
 background:#60a5fa;
 }
 
@@ -270,13 +263,6 @@ text-decoration:none;
 border-radius:30px;
 font-weight:bold;
 transition:0.3s;
-border:none;
-cursor:pointer;
-}
-
-.boton:hover{
-transform:scale(1.05);
-box-shadow:0 10px 25px rgba(37,99,235,0.6);
 }
 
 .boton-ficha{
@@ -291,9 +277,10 @@ FICHA TECNICA
 
 .ficha{
 display:none;
-margin-top:10px;
+margin-top:12px;
 font-size:14px;
-opacity:0.85;
+line-height:1.6;
+opacity:0.9;
 }
 
 /* =====================
@@ -371,16 +358,16 @@ nav ul li{margin:12px 0;}
 
 <!-- RAM -->
 <div class="auto">
-<div class="carousel" data-autoplay="true">
-<button class="arrow left">&#8249;</button>
-<button class="arrow right">&#8250;</button>
+<div class="carousel">
+<button class="arrow left">‹</button>
+<button class="arrow right">›</button>
 <div class="carousel-track">
-<img src="ram_1500_2016.png" loading="lazy">
-<img src="ram_1500_2016.png" loading="lazy">
-<img src="ram_1500_2016.png" loading="lazy">
+<img src="ram_1500_2016.png">
+<img src="ram_1500_2016.png">
+<img src="ram_1500_2016.png">
+</div>
 </div>
 <div class="dots"></div>
-</div>
 <div class="auto-info">
 <h3>Ram 1500 Laramie 5.7 V8 4x4 2016</h3>
 <p>124.000 km</p>
@@ -389,46 +376,58 @@ nav ul li{margin:12px 0;}
 <a class="boton" href="https://wa.me/541123283606">Consultar</a>
 <button class="boton boton-ficha">Ficha técnica</button>
 </div>
-<div class="ficha">V8 5.7 · 4x4 · Automática · Full</div>
+<div class="ficha">
+° Motor: 5.7 V8 naftero<br>
+° Año: 2016<br>
+° Tracción: 4x4<br>
+° Transmisión: Automática<br>
+° Versión: Laramie Full
+</div>
 </div>
 </div>
 
 <!-- RANGER -->
 <div class="auto">
-<div class="carousel" data-autoplay="true">
-<button class="arrow left">&#8249;</button>
-<button class="arrow right">&#8250;</button>
+<div class="carousel">
+<button class="arrow left">‹</button>
+<button class="arrow right">›</button>
 <div class="carousel-track">
-<img src="Ranger_2021_baku.png" loading="lazy">
-<img src="Ranger_2021_baku.png" loading="lazy">
-<img src="Ranger_2021_baku.png" loading="lazy">
+<img src="Ranger_2021_baku.png">
+<img src="Ranger_2021_baku.png">
+<img src="Ranger_2021_baku.png">
+</div>
 </div>
 <div class="dots"></div>
-</div>
 <div class="auto-info">
-<h3>Ford Ranger 3.2 Cd Limited 2021</h3>
+<h3>Ford Ranger 3.2 Limited 4x4 2021</h3>
 <p>89.000 km</p>
 <div class="precio">USD 31.000</div>
 <div class="acciones">
 <a class="boton" href="https://wa.me/541123283606">Consultar</a>
 <button class="boton boton-ficha">Ficha técnica</button>
 </div>
-<div class="ficha">3.2 · Automática · 4x4 · Full</div>
+<div class="ficha">
+° Motor: 3.2 TDCi<br>
+° Año: 2021<br>
+° Tracción: 4x4<br>
+° Transmisión: Automática<br>
+° Versión: Limited
+</div>
 </div>
 </div>
 
 <!-- AMAROK -->
 <div class="auto">
-<div class="carousel" data-autoplay="true">
-<button class="arrow left">&#8249;</button>
-<button class="arrow right">&#8250;</button>
+<div class="carousel">
+<button class="arrow left">‹</button>
+<button class="arrow right">›</button>
 <div class="carousel-track">
-<img src="Amarok_v6_2019.png" loading="lazy">
-<img src="Amarok_v6_2019.png" loading="lazy">
-<img src="Amarok_v6_2019.png" loading="lazy">
+<img src="Amarok_v6_2019.png">
+<img src="Amarok_v6_2019.png">
+<img src="Amarok_v6_2019.png">
+</div>
 </div>
 <div class="dots"></div>
-</div>
 <div class="auto-info">
 <h3>Volkswagen Amarok V6 Extreme 2019</h3>
 <p>30.000 km</p>
@@ -437,31 +436,42 @@ nav ul li{margin:12px 0;}
 <a class="boton" href="https://wa.me/541123283606">Consultar</a>
 <button class="boton boton-ficha">Ficha técnica</button>
 </div>
-<div class="ficha">V6 · 258cv · Automática · 4Motion</div>
+<div class="ficha">
+° Motor: 3.0 V6<br>
+° Año: 2019<br>
+° Tracción: 4Motion<br>
+° Transmisión: Automática<br>
+° Versión: Extreme
+</div>
 </div>
 </div>
 
 <!-- TIGGO -->
 <div class="auto">
-<div class="carousel" data-autoplay="true">
-<button class="arrow left">&#8249;</button>
-<button class="arrow right">&#8250;</button>
+<div class="carousel">
+<button class="arrow left">‹</button>
+<button class="arrow right">›</button>
 <div class="carousel-track">
-<img src="chery_tiggo_2017.png" loading="lazy">
-<img src="chery_tiggo_2017.png" loading="lazy">
-<img src="chery_tiggo_2017.png" loading="lazy">
+<img src="chery_tiggo_2017.png">
+<img src="chery_tiggo_2017.png">
+<img src="chery_tiggo_2017.png">
+</div>
 </div>
 <div class="dots"></div>
-</div>
 <div class="auto-info">
-<h3>Chery Tiggo 5 Luxury CVT 2017</h3>
+<h3>Chery Tiggo 5 2.0 CVT 2017</h3>
 <p>95.000 km</p>
 <div class="precio">USD 14.300</div>
 <div class="acciones">
 <a class="boton" href="https://wa.me/541123283606">Consultar</a>
 <button class="boton boton-ficha">Ficha técnica</button>
 </div>
-<div class="ficha">2.0 · CVT · Full</div>
+<div class="ficha">
+° Motor: 2.0 naftero<br>
+° Año: 2017<br>
+° Transmisión: CVT<br>
+° Versión: Luxury
+</div>
 </div>
 </div>
 
@@ -476,65 +486,42 @@ nav ul li{margin:12px 0;}
 
 <script>
 
-/* MENU */
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
 
 /* FICHA TECNICA */
 document.querySelectorAll(".boton-ficha").forEach(btn=>{
-btn.addEventListener("click",()=>{
+btn.onclick=()=>{
 let ficha=btn.parentElement.nextElementSibling;
 ficha.style.display=ficha.style.display==="block"?"none":"block";
-});
+};
 });
 
-/* CAROUSEL LOGICA COMPLETA */
-document.querySelectorAll(".carousel").forEach(carousel=>{
-const track=carousel.querySelector(".carousel-track");
-const imgs=track.children;
-const dots=carousel.querySelector(".dots");
+/* CAROUSEL + AUTOPLAY */
+document.querySelectorAll(".auto").forEach(auto=>{
+let track=auto.querySelector(".carousel-track");
+let imgs=track.children.length;
 let index=0;
+let dots=auto.querySelector(".dots");
 
-/* dots */
-for(let i=0;i<imgs.length;i++){
-const d=document.createElement("span");
-if(i===0) d.classList.add("active");
-d.onclick=()=>move(i);
+for(let i=0;i<imgs;i++){
+let d=document.createElement("div");
+d.className="dot"+(i===0?" active":"");
 dots.appendChild(d);
 }
 
-function move(i){
-index=i;
-track.style.transform=`translateX(-${i*100}%)`;
-dots.querySelectorAll("span").forEach((d,idx)=>{
-d.classList.toggle("active",idx===i);
+let update=()=>{
+track.style.transform=`translateX(-${index*100}%)`;
+dots.querySelectorAll(".dot").forEach((d,i)=>{
+d.classList.toggle("active",i===index);
 });
-}
-
-/* arrows */
-carousel.querySelector(".left").onclick=()=>{
-index=index>0?index-1:imgs.length-1;
-move(index);
-};
-carousel.querySelector(".right").onclick=()=>{
-index=index<imgs.length-1?index+1:0;
-move(index);
 };
 
-/* swipe */
-let startX=0;
-carousel.addEventListener("touchstart",e=>startX=e.touches[0].clientX,{passive:true});
-carousel.addEventListener("touchend",e=>{
-let dx=e.changedTouches[0].clientX-startX;
-if(dx<-50) carousel.querySelector(".right").click();
-if(dx>50) carousel.querySelector(".left").click();
-});
+auto.querySelector(".arrow.left").onclick=()=>{index=(index-1+imgs)%imgs;update();};
+auto.querySelector(".arrow.right").onclick=()=>{index=(index+1)%imgs;update();};
 
-/* autoplay solo desktop */
-if(window.innerWidth>768){
-setInterval(()=>carousel.querySelector(".right").click(),4500);
-}
+setInterval(()=>{index=(index+1)%imgs;update();},4500);
 });
 
 </script>
