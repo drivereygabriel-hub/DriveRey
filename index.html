@@ -329,6 +329,15 @@ font-size:16px;
 
 </style>
 
+<!-- GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RSP50Y8H95');
+</script>
+
 </head>
 
 <body>
@@ -465,11 +474,80 @@ El sistema es transparente y seguro.
 <a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
 
 <script>
-
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
+</script>
 
+<!-- TRACKING + WHATSAPP DINÁMICO -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const telefono = "541123283606";
+
+const acciones = {
+flotante: {
+mensaje: "Hola, vengo de la página de DriveRey y estoy buscando asesoramiento.",
+evento: "whatsapp_click",
+seccion: "whatsapp-flotante",
+intencion: "consulta_general",
+tipo: "asesoramiento"
+},
+hero: {
+mensaje: "Hola, vengo de la página de DriveRey y quiero vender mi vehículo.",
+evento: "cta_hero_click",
+seccion: "hero",
+intencion: "vender_vehiculo",
+tipo: "primer_contacto"
+},
+ctaFinal: {
+mensaje: "Hola, vengo de la página de DriveRey y quiero agendar una cita para ofrecer mi vehículo.",
+evento: "cta_final_click",
+seccion: "cta-final",
+intencion: "agendar_cita",
+tipo: "ofrecer_vehiculo"
+}
+};
+
+function enviarWhatsapp(config){
+gtag('event', config.evento, {
+page_name: "index",
+section: config.seccion,
+intention: config.intencion,
+query_type: config.tipo
+});
+window.open(
+"https://wa.me/" + telefono + "?text=" + encodeURIComponent(config.mensaje),
+"_blank"
+);
+}
+
+const botonFlotante = document.querySelector(".whatsapp");
+if(botonFlotante){
+botonFlotante.addEventListener("click", function(e){
+e.preventDefault();
+enviarWhatsapp(acciones.flotante);
+});
+}
+
+const botonHero = document.querySelector(".cta a");
+if(botonHero){
+botonHero.addEventListener("click", function(e){
+e.preventDefault();
+enviarWhatsapp(acciones.hero);
+});
+}
+
+const botonCtaFinal = document.querySelector(".btn-cita");
+if(botonCtaFinal){
+botonCtaFinal.addEventListener("click", function(e){
+e.preventDefault();
+enviarWhatsapp(acciones.ctaFinal);
+});
+}
+
+});
 </script>
 
 </body>
