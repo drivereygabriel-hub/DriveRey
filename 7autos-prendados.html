@@ -11,6 +11,15 @@
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RSP50Y8H95');
+</script>
+
 <style>
 
 /* =====================
@@ -231,6 +240,82 @@ SECCIONES
 }
 
 /* =====================
+CATÁLOGO VEHÍCULOS PRENDADOS
+===================== */
+
+.catalogo{
+  padding:90px 30px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.grid-autos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.auto{
+  background:#111827;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.carousel{
+  position:relative;
+  height:200px;
+  overflow:hidden;
+}
+
+.carousel-track{
+  display:flex;
+  transition:transform .4s ease;
+}
+
+.carousel img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+
+.carousel button{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.6);
+  border:none;
+  color:white;
+  font-size:22px;
+  padding:6px 10px;
+  cursor:pointer;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+.auto-info{
+  padding:20px;
+  text-align:left;
+}
+
+.auto-info h3{
+  color:#60a5fa;
+  margin-bottom:8px;
+}
+
+.precio{
+  font-size:20px;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.ficha{
+  font-size:14px;
+  opacity:.85;
+}
+
+/* =====================
 CTA FINAL
 ===================== */
 
@@ -283,61 +368,27 @@ footer{
 }
 
 /* =====================
-RESPONSIVE (MOBILE)
+RESPONSIVE
 ===================== */
 
 @media (max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
-  nav ul{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#000;
-    flex-direction:column;
-    align-items:center;
-    display:none;
-    padding:20px 0;
-  }
-
-  nav ul.active{
-    display:flex;
-  }
-
-  nav ul li{
-    margin:12px 0;
-  }
-
-  .hero h1{
-    font-size:30px;
-  }
-
-  .cards{
-    flex-direction:column;
-    align-items:center;
-  }
+  .menu-toggle{display:block;}
+  nav ul{display:none;flex-direction:column;background:#000;position:absolute;top:70px;width:100%;}
+  nav ul.active{display:flex;}
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 <nav>
-
   <div class="logo-area">
-    <img src="logo.png" alt="DriveRey Logo">
+    <img src="logo.png">
     <h1>DriveRey</h1>
   </div>
-
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
   <ul id="menu">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="3experiencia.html">Experiencia</a></li>
@@ -348,45 +399,36 @@ RESPONSIVE (MOBILE)
     <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
     <li><a href="4reseñas.html">Reseñas</a></li>
   </ul>
-
 </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
     <h1>¿Querés vender un auto prendado?</h1>
-    <p>
-      Si tu vehículo tiene prenda bancaria y no sabés cómo venderlo,
-      en DriveRey te ayudamos a gestionar la operación de forma segura
-      con compradores que conocen este tipo de transacciones.
-    </p>
-    <div class="cta">
-      <a href="https://wa.me/541123283606">Consultar por WhatsApp</a>
-    </div>
+    <p>En DriveRey te ayudamos a gestionar la operación de forma segura.</p>
+    <div class="cta"><a href="https://wa.me/541123283606">Consultar</a></div>
   </div>
 </section>
 
 <section class="section">
   <h2>¿Se puede vender un auto prendado?</h2>
-  <p>Sí. Un vehículo prendado puede venderse siempre que se gestione correctamente la cancelación de la deuda.</p>
-  <p>Existen formas seguras de realizar la operación sin riesgos.</p>
+  <p>Sí. Un vehículo prendado puede venderse gestionando correctamente la deuda.</p>
 </section>
 
 <section class="section">
   <h2>Cómo funciona la venta</h2>
-
   <div class="cards">
-    <div class="card"><h3>Evaluación</h3><p>Analizamos la prenda y el monto pendiente.</p></div>
-    <div class="card"><h3>Publicación</h3><p>Difusión estratégica del vehículo.</p></div>
-    <div class="card"><h3>Comprador adecuado</h3><p>Solo compradores que entienden el proceso.</p></div>
-    <div class="card"><h3>Operación segura</h3><p>Acompañamiento hasta el cierre.</p></div>
+    <div class="card"><h3>Evaluación</h3><p>Revisión de prenda</p></div>
+    <div class="card"><h3>Publicación</h3><p>Difusión</p></div>
+    <div class="card"><h3>Comprador</h3><p>Adecuado</p></div>
+    <div class="card"><h3>Cierre</h3><p>Seguro</p></div>
   </div>
 </section>
 
 <section class="cta-section">
   <h2>¿Tenés un auto prendado?</h2>
-  <p>Evaluamos tu caso y te explicamos las opciones.</p>
-  <a href="https://wa.me/541123283606" class="btn-cita">🚗 Hablar por WhatsApp</a>
+  <p>Evaluamos tu caso.</p>
+  <a href="https://wa.me/541123283606" class="btn-cita">Hablar por WhatsApp</a>
 </section>
 
 <footer>
@@ -396,9 +438,31 @@ RESPONSIVE (MOBILE)
 <a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
 
 <script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
-}
+function toggleMenu(){document.getElementById("menu").classList.toggle("active");}
+
+document.querySelectorAll(".carousel").forEach(c=>{
+ let t=c.querySelector(".carousel-track"),i=0;
+ c.querySelector(".next").onclick=()=>{i=(i+1)%2;t.style.transform=`translateX(-${i*100}%)`;}
+ c.querySelector(".prev").onclick=()=>{i=(i-1+2)%2;t.style.transform=`translateX(-${i*100}%)`;}
+ setInterval(()=>{i=(i+1)%2;t.style.transform=`translateX(-${i*100}%)`},4000);
+});
+
+/* WHATSAPP – tracking + mensaje contextual */
+document.querySelectorAll('a[href*="wa.me"]').forEach(link=>{
+link.addEventListener("click",function(e){
+e.preventDefault();
+
+let mensaje="Hola, vengo de la página de DriveRey y quiero vender un auto prendado.";
+
+gtag('event','click_whatsapp',{
+pagina:'autos_prendados',
+seccion:'landing',
+accion:'contacto'
+});
+
+window.open(this.href+'?text='+encodeURIComponent(mensaje),'_blank');
+});
+});
 </script>
 
 </body>
