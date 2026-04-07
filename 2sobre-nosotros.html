@@ -8,21 +8,43 @@
 <title>Sobre Nosotros | DriveRey</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-<style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RSP50Y8H95');
+</script>
 
-/* =====================
-   BASE
-===================== */
+<style>
+/* ===================== BASE ===================== */
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:#0f172a;
   color:white;
+  scroll-behavior:smooth;
 }
 
-/* =====================
-   NAVBAR (MAESTRA)
-===================== */
+/* FONDO FIJO CON OVERLAY RADIAL */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(96,165,250,0.18), transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(37,99,235,0.22), transparent 50%);
+  z-index:0;
+  pointer-events:none;
+}
+
+body > *{
+  position:relative;
+  z-index:1;
+}
+
+/* ===================== NAVBAR ===================== */
 header{
   background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
   padding:12px 40px;
@@ -100,9 +122,40 @@ nav a:hover::after{
   width:100%;
 }
 
-/* =====================
-   HERO
-===================== */
+/* MOBILE TOGGLE */
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+@media (max-width:768px){
+  .menu-toggle{
+    display:block;
+  }
+
+  nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  nav ul li{
+    margin:12px 0;
+  }
+}
+
+/* ===================== HERO ===================== */
 .hero{
   height:60vh;
   background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
@@ -122,9 +175,7 @@ nav a:hover::after{
   backdrop-filter:blur(6px);
 }
 
-/* =====================
-   SECCIONES
-===================== */
+/* ===================== SECCIONES ===================== */
 .section{
   padding:70px 40px;
   max-width:1000px;
@@ -205,7 +256,7 @@ footer{
   color:#9ca3af;
 }
 
-/* WHATSAPP */
+/* ===================== WHATSAPP ===================== */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -218,46 +269,14 @@ footer{
   font-weight:bold;
   box-shadow:0 10px 20px rgba(0,0,0,0.4);
   transition:0.3s;
+  z-index:2000;
 }
 
 .whatsapp:hover{
   transform:scale(1.1);
 }
-
-.menu-toggle{
-  display:none;
-  font-size:30px;
-  cursor:pointer;
-}
-
-@media (max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
-  nav ul{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#000;
-    flex-direction:column;
-    align-items:center;
-    display:none;
-    padding:20px 0;
-  }
-
-  nav ul.active{
-    display:flex;
-  }
-
-  nav ul li{
-    margin:12px 0;
-  }
-}
-
 </style>
+
 </head>
 
 <body>
@@ -304,7 +323,6 @@ footer{
 
 <section class="section">
   <h2>Nuestros Valores</h2>
-
   <div class="values">
     <div class="value"><h3>Transparencia</h3><p>Operaciones claras para todas las partes.</p></div>
     <div class="value"><h3>Confianza</h3><p>Seguridad durante todo el proceso.</p></div>
@@ -322,7 +340,7 @@ footer{
   </div>
 
   <div class="cta">
-    <a href="https://wa.me/541123283606">Coordinar una cita</a>
+    <a href="https://wa.me/541123283606?text=Hola,%20quiero%20coordinar%20una%20cita%20con%20DriveRey" onclick="ga4Event('click_whatsapp','CTA Final')" target="_blank">Coordinar una cita</a>
   </div>
 </section>
 
@@ -330,18 +348,43 @@ footer{
   <p>General Pacheco · Buenos Aires</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
+<!-- BOTÓN WHATSAPP FIJO -->
+<a class="whatsapp" href="https://wa.me/541123283606?text=Hola,%20quiero%20consultar%20sobre%20Sobre%20Nosotros" target="_blank" onclick="ga4Event('click_whatsapp','Botón Fijo')">WhatsApp</a>
 
 <script>
+// ===================== TOGGLE MENU MOBILE =====================
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
+
+// ===================== GA4 EVENT TRACKING =====================
+function ga4Event(eventName, label){
+  gtag('event', eventName, {
+    'page': document.title,
+    'content': label
+  });
+}
+
+// ===================== ANIMACIONES CARDS =====================
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.value');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.opacity = '1';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => {
+    card.style.transform = 'translateY(50px)';
+    card.style.opacity = '0';
+    observer.observe(card);
+  });
+});
 </script>
 
 </body>
 </html>
-</html>
-
-
-
-
