@@ -9,12 +9,18 @@
 <title>Reseñas de Clientes | DriveRey</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+<!-- ===================== GOOGLE ANALYTICS GA4 ===================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RSP50Y8H95');
+</script>
+
 <style>
 
-/* =====================
-BASE
-===================== */
-
+/* ===================== BASE ===================== */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
@@ -27,12 +33,11 @@ url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
+scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
-/* =====================
-NAVBAR (MAESTRA)
-===================== */
-
+/* ===================== NAVBAR (MAESTRA) ===================== */
 header{
 background:linear-gradient(90deg,#000000,#0f172a,#2563eb);
 padding:12px 40px;
@@ -53,8 +58,6 @@ align-items:center;
 justify-content:space-between;
 }
 
-/* LOGO AREA */
-
 .logo-area{
 display:flex;
 align-items:center;
@@ -74,8 +77,6 @@ font-size:22px;
 font-weight:bold;
 color:#60a5fa;
 }
-
-/* MENU */
 
 nav ul{
 list-style:none;
@@ -112,19 +113,37 @@ nav a:hover::after{
 width:100%;
 }
 
-/* =====================
-HERO
-===================== */
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
 
+@media (max-width:768px){
+  .menu-toggle{display:block;}
+  nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
+  nav ul.active{display:flex;}
+  nav ul li{margin:12px 0;}
+}
+
+/* ===================== HERO ===================== */
 .hero{
 height:320px;
 background-image:
 linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
 url('https://images.unsplash.com/photo-1549921296-3a6b7f7b53f1');
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 align-items:center;
 justify-content:center;
@@ -135,22 +154,21 @@ text-align:center;
 font-size:42px;
 padding:20px;
 border-radius:8px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(5px);
 }
 
-/* =====================
-CONTENEDOR
-===================== */
-
+/* ===================== CONTAINER ===================== */
 .container{
 max-width:1100px;
 margin:auto;
 padding:60px 20px;
-
 background:rgba(0,0,0,0.75);
 border-radius:10px;
 backdrop-filter:blur(5px);
 }
 
+/* ===================== SECCION TITULO ===================== */
 .section-title{
 text-align:center;
 font-size:32px;
@@ -158,10 +176,7 @@ margin-bottom:50px;
 color:#60a5fa;
 }
 
-/* =====================
-RESEÑAS
-===================== */
-
+/* ===================== RESEÑAS GRID ===================== */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -175,6 +190,8 @@ border-radius:10px;
 border:1px solid #222;
 transition:0.3s;
 backdrop-filter:blur(4px);
+opacity:0;
+transform:translateY(50px);
 }
 
 .review:hover{
@@ -197,10 +214,7 @@ color:#ffd700;
 margin-bottom:10px;
 }
 
-/* =====================
-CTA
-===================== */
-
+/* ===================== CTA ===================== */
 .cta{
 text-align:center;
 margin-top:80px;
@@ -224,10 +238,7 @@ transform:scale(1.08);
 box-shadow:0 15px 35px rgba(37,99,235,0.9);
 }
 
-/* =====================
-FOOTER
-===================== */
-
+/* ===================== FOOTER ===================== */
 footer{
 background:#000;
 text-align:center;
@@ -237,38 +248,23 @@ border-top:1px solid #222;
 color:#9ca3af;
 }
 
-.menu-toggle{
-  display:none;
-  font-size:30px;
-  cursor:pointer;
+/* ===================== BOTON WHATSAPP FIJO ===================== */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px 22px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+z-index:2000;
 }
 
-@media (max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
-  nav ul{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#000;
-    flex-direction:column;
-    align-items:center;
-    display:none;
-    padding:20px 0;
-  }
-
-  nav ul.active{
-    display:flex;
-  }
-
-  nav ul li{
-    margin:12px 0;
-  }
-}
+.whatsapp:hover{transform:scale(1.1);}
 
 </style>
 
@@ -276,10 +272,9 @@ color:#9ca3af;
 
 <body>
 
+<!-- ===================== HEADER ===================== -->
 <header>
-
 <nav>
-
   <div class="logo-area">
     <img src="logo.png" alt="DriveRey Logo">
     <h1>DriveRey</h1>
@@ -297,15 +292,15 @@ color:#9ca3af;
     <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
     <li><a href="4reseñas.html">Reseñas</a></li>
   </ul>
-
 </nav>
-
 </header>
 
+<!-- ===================== HERO ===================== -->
 <section class="hero">
 <h1>Lo que dicen nuestros clientes</h1>
 </section>
 
+<!-- ===================== CONTAINER PRINCIPAL ===================== -->
 <div class="container">
 
 <h2 class="section-title">Opiniones reales</h2>
@@ -372,30 +367,56 @@ Todo muy profesional.
 
 </div>
 
+<!-- ===================== CTA FINAL ===================== -->
 <div class="cta">
-
 <h2>¿Querés vender tu vehículo?</h2>
 <p>Coordiná una cita para evaluar tu auto.</p>
-
-<a href="https://wa.me/541123283606">Coordinar una cita</a>
-
+<a href="https://wa.me/541123283606?text=Hola,%20quiero%20consultar%20sobre%20Reseñas" target="_blank" onclick="ga4Event('click_whatsapp','CTA Reseñas')">Coordinar una cita</a>
 </div>
 
 </div>
 
+<!-- ===================== FOOTER ===================== -->
 <footer>
-
-<p>
-Intermediación y venta de vehículos  
-General Pacheco · Buenos Aires
-</p>
-
+<p>Intermediación y venta de vehículos · General Pacheco · Buenos Aires</p>
 </footer>
 
+<!-- ===================== BOTON WHATSAPP FIJO ===================== -->
+<a class="whatsapp" href="https://wa.me/541123283606?text=Hola,%20quiero%20consultar%20sobre%20Reseñas" target="_blank" onclick="ga4Event('click_whatsapp','Botón Fijo')">WhatsApp</a>
+
 <script>
+// ===================== TOGGLE MENU =====================
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
+
+// ===================== GA4 EVENT TRACKING =====================
+function ga4Event(eventName,label){
+  gtag('event',eventName,{
+    'page':document.title,
+    'content':label
+  });
+}
+
+// ===================== ANIMACIÓN REVIEWS =====================
+document.addEventListener('DOMContentLoaded',()=>{
+const reviews=document.querySelectorAll('.review');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.transform='translateY(0)';
+entry.target.style.opacity='1';
+observer.unobserve(entry.target);
+}
+});
+},{threshold:0.2});
+
+reviews.forEach(r=>{
+r.style.opacity='0';
+r.style.transform='translateY(50px)';
+observer.observe(r);
+});
+});
 </script>
 
 </body>
