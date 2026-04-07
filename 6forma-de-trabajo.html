@@ -10,6 +10,21 @@
 
 <meta name="description" content="Conocé cómo funciona nuestro sistema para vender tu auto de forma rápida, segura y transparente en Buenos Aires.">
 
+<!-- =====================
+GOOGLE ANALYTICS (AGREGADO)
+===================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RSP50Y8H95', {
+  page_title: 'Forma de Trabajo',
+  page_location: window.location.href,
+  page_path: window.location.pathname
+});
+</script>
+
 <style>
 
 /* =====================
@@ -99,7 +114,7 @@ color:#60a5fa;
 }
 
 nav a::after{
-content:'';
+content:''; 
 position:absolute;
 width:0%;
 height:2px;
@@ -249,6 +264,27 @@ border-top:1px solid #222;
 color:#9ca3af;
 }
 
+/* WHATSAPP FLOTANTE */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px 22px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+z-index:2000;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
 .menu-toggle{
   display:none;
   font-size:30px;
@@ -285,7 +321,6 @@ color:#9ca3af;
 </style>
 
 </head>
-
 <body>
 
 <header>
@@ -389,7 +424,7 @@ El propietario mantiene siempre el control total del vehículo y de las condicio
 <h2>¿Querés vender tu auto?</h2>
 <p>Coordiná una cita para evaluar tu vehículo.</p>
 
-<a class="boton" href="https://wa.me/541123283606">Coordinar una cita</a>
+<a class="boton" id="cta-whatsapp" href="https://wa.me/541123283606?text=Hola,%20quiero%20coordinar%20una%20cita%20para%20vender%20mi%20auto.">Coordinar una cita</a>
 
 </div>
 
@@ -403,10 +438,48 @@ El propietario mantiene siempre el control total del vehículo y de las condicio
 
 </footer>
 
+<a class="whatsapp" href="https://wa.me/541123283606?text=Hola,%20quiero%20coordinar%20una%20cita%20para%20vender%20mi%20auto.">WhatsApp</a>
+
 <script>
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
+</script>
+
+<!-- =====================
+TRACKING EVENTOS (AGREGADO)
+===================== -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  gtag('event','view_section',{
+    page_name:'forma_de_trabajo',
+    section:'hero',
+    intent:'informacion_servicio',
+    user_stage:'descubrimiento'
+  });
+
+  gtag('event','view_section',{
+    page_name:'forma_de_trabajo',
+    section:'proceso',
+    intent:'comprension_proceso',
+    user_stage:'consideracion'
+  });
+
+  var cta = document.getElementById('cta-whatsapp');
+  if(cta){
+    cta.addEventListener('click', function(){
+      gtag('event','click_whatsapp',{
+        page_name:'forma_de_trabajo',
+        section:'cta_final',
+        intent:'agendar_cita',
+        lead_type:'vendedor',
+        contact_channel:'whatsapp'
+      });
+    });
+  }
+
+});
 </script>
 
 </body>
