@@ -18,6 +18,102 @@ body{
   font-family:Arial, Helvetica, sans-serif;
   background:#0f172a;
   color:white;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* =====================
+   FONDO GLOBAL COMBINADO (AGREGADO)
+===================== */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:
+    linear-gradient(
+      rgba(15,23,42,0.88),
+      rgba(15,23,42,0.92)
+    ),
+    url("https://images.unsplash.com/photo-1493238792000-8113da705763");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  z-index:-3;
+}
+
+/* =====================
+   FONDOS CONTEXTUALES POR SECCIÓN (AGREGADO)
+===================== */
+.container{
+  position:relative;
+  z-index:1;
+}
+
+.container::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(15,23,42,0.85),
+    rgba(17,24,39,0.95)
+  );
+  z-index:-1;
+}
+
+/* Variación sutil por bloque */
+.container:nth-of-type(2)::before{
+  background:linear-gradient(
+    180deg,
+    rgba(15,23,42,0.78),
+    rgba(37,99,235,0.08)
+  );
+}
+
+.container:nth-of-type(3)::before{
+  background:linear-gradient(
+    180deg,
+    rgba(17,24,39,0.92),
+    rgba(15,23,42,1)
+  );
+}
+
+.container:nth-of-type(4)::before{
+  background:linear-gradient(
+    180deg,
+    rgba(15,23,42,0.85),
+    rgba(37,99,235,0.12)
+  );
+}
+
+.container.process::before{
+  background:linear-gradient(
+    90deg,
+    rgba(15,23,42,0.95),
+    rgba(17,24,39,0.95),
+    rgba(15,23,42,0.95)
+  );
+}
+
+/* Refuerzo visual CTA */
+.container .cta{
+  position:relative;
+  z-index:1;
+}
+
+.container .cta::before{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  background:radial-gradient(
+    circle at center,
+    rgba(37,99,235,0.18),
+    rgba(15,23,42,0.95)
+  );
+  z-index:-1;
 }
 
 /* =====================
@@ -218,11 +314,6 @@ nav a:hover::after{
   box-shadow:0 10px 30px rgba(37,99,235,0.7);
 }
 
-.cta a:hover{
-  transform:scale(1.05);
-  box-shadow:0 15px 40px rgba(37,99,235,1);
-}
-
 /* FOOTER */
 footer{
   background:black;
@@ -245,6 +336,7 @@ footer{
   font-weight:bold;
   box-shadow:0 10px 20px rgba(0,0,0,0.4);
   transition:0.3s;
+  z-index:2000;
 }
 
 .whatsapp:hover{
@@ -258,11 +350,7 @@ footer{
 }
 
 @media (max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
+  .menu-toggle{display:block;}
   nav ul{
     position:absolute;
     top:70px;
@@ -274,17 +362,21 @@ footer{
     display:none;
     padding:20px 0;
   }
-
-  nav ul.active{
-    display:flex;
-  }
-
-  nav ul li{
-    margin:12px 0;
-  }
+  nav ul.active{display:flex;}
+  nav ul li{margin:12px 0;}
 }
 
 </style>
+
+<!-- GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RSP50Y8H95');
+</script>
+
 </head>
 
 <body>
@@ -374,6 +466,50 @@ footer{
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
+</script>
+
+<!-- TRACKING WHATSAPP + EVENTOS GA -->
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const telefono = "541123283606";
+
+  function enviarWhatsapp(mensaje, evento, seccion, intencion, tipo){
+    gtag('event', evento, {
+      page_name: "experiencia",
+      section: seccion,
+      intention: intencion,
+      query_type: tipo
+    });
+    window.open(
+      "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje),
+      "_blank"
+    );
+  }
+
+  document.querySelector(".whatsapp").addEventListener("click", function(e){
+    e.preventDefault();
+    enviarWhatsapp(
+      "Hola, vengo de la página de DriveRey y quiero recibir asesoramiento.",
+      "whatsapp_click",
+      "whatsapp_flotante",
+      "consulta_general",
+      "asesoramiento"
+    );
+  });
+
+  document.querySelector(".cta a").addEventListener("click", function(e){
+    e.preventDefault();
+    enviarWhatsapp(
+      "Hola, vengo de la sección Experiencia y quiero vender mi vehículo.",
+      "cta_experiencia_click",
+      "cta_experiencia",
+      "vender_vehiculo",
+      "primer_contacto"
+    );
+  });
+
+});
 </script>
 
 </body>
