@@ -10,6 +10,15 @@
 
 <meta name="description" content="Autos seleccionados en venta en Buenos Aires. Intermediación privada, consignación y venta segura de vehículos.">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RSP50Y8H95');
+</script>
+
 <style>
 
 /* =====================
@@ -495,6 +504,17 @@ document.querySelectorAll(".boton-ficha").forEach(btn=>{
 btn.onclick=()=>{
 let ficha=btn.parentElement.nextElementSibling;
 ficha.style.display=ficha.style.display==="block"?"none":"block";
+
+/* GA4 – apertura ficha técnica */
+let auto=btn.closest(".auto");
+let nombre=auto.querySelector("h3").innerText;
+
+gtag('event','ver_ficha_tecnica',{
+pagina:'vehiculos',
+seccion:'listado',
+vehiculo:nombre,
+accion:'ficha'
+});
 };
 });
 
@@ -522,6 +542,26 @@ auto.querySelector(".arrow.left").onclick=()=>{index=(index-1+imgs)%imgs;update(
 auto.querySelector(".arrow.right").onclick=()=>{index=(index+1)%imgs;update();};
 
 setInterval(()=>{index=(index+1)%imgs;update();},4500);
+});
+
+/* WHATSAPP – tracking + mensaje dinámico sin modificar href */
+document.querySelectorAll('a[href*="wa.me"]').forEach(link=>{
+link.addEventListener("click",function(e){
+e.preventDefault();
+
+let auto=this.closest(".auto");
+let vehiculo=auto ? auto.querySelector("h3").innerText : "vehículo";
+let mensaje=`Hola, vengo de la página de DriveRey y quiero más información sobre el ${vehiculo}.`;
+
+gtag('event','click_whatsapp',{
+pagina:'vehiculos',
+seccion:'listado',
+vehiculo:vehiculo,
+accion:'contacto'
+});
+
+window.open(this.href+'?text='+encodeURIComponent(mensaje),'_blank');
+});
 });
 
 </script>
