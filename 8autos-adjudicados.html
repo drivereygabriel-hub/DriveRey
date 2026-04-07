@@ -11,6 +11,20 @@
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+<!-- =====================
+TRACKING GA4 – TAG BASE
+===================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSP50Y8H95"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RSP50Y8H95');
+</script>
+<!-- =====================
+FIN TRACKING GA4 – TAG BASE
+===================== -->
+
 <style>
 
 /* =====================
@@ -28,6 +42,31 @@ body{
   background:#0f172a;
   color:white;
   scroll-behavior:smooth;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* =====================
+FONDO VEHÍCULO (ÚNICO AGREGADO)
+===================== */
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(15,23,42,0.95)
+    ),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  opacity:0.25;
+  filter:blur(2px);
+  z-index:-3;
+  pointer-events:none;
 }
 
 /* =====================
@@ -204,6 +243,103 @@ SECCIONES
 }
 
 /* =====================
+CATÁLOGO 0KM ADJUDICADOS
+===================== */
+
+.catalogo-adjudicados{
+  padding:90px 30px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.grid-adjudicados{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.auto-adj{
+  background:#111827;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.carousel-adj{
+  position:relative;
+  height:200px;
+  overflow:hidden;
+}
+
+.carousel-track-adj{
+  display:flex;
+  transition:transform .4s ease;
+}
+
+.carousel-adj img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+
+.carousel-adj button{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.6);
+  border:none;
+  color:white;
+  font-size:22px;
+  padding:6px 10px;
+  cursor:pointer;
+}
+
+.prev-adj{left:10px;}
+.next-adj{right:10px;}
+
+.auto-info-adj{
+  padding:20px;
+  text-align:left;
+}
+
+.auto-info-adj h3{
+  color:#60a5fa;
+  margin-bottom:8px;
+}
+
+.estado{
+  font-size:18px;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.ficha{
+  font-size:14px;
+  opacity:.85;
+}
+
+/* =====================
+BOTÓN WHATSAPP VEHÍCULO
+===================== */
+
+.btn-whatsapp-veh{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 16px;
+  font-size:14px;
+  font-weight:bold;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  background:#25D366;
+  transition:.3s;
+}
+
+.btn-whatsapp-veh:hover{
+  background:#1ebe57;
+}
+
+/* =====================
 CTA FINAL
 ===================== */
 
@@ -238,7 +374,9 @@ CTA FINAL
   background:linear-gradient(45deg,#2563eb,#3b82f6,#1d4ed8);
 }
 
-/* FOOTER */
+/* =====================
+FOOTER
+===================== */
 
 footer{
   background:black;
@@ -247,7 +385,7 @@ footer{
   color:#9ca3af;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FIJO */
 
 .whatsapp{
   position:fixed;
@@ -262,43 +400,14 @@ footer{
 }
 
 /* =====================
-RESPONSIVE (MOBILE)
+RESPONSIVE
 ===================== */
 
 @media (max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
-  nav ul{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#000;
-    flex-direction:column;
-    align-items:center;
-    display:none;
-    padding:20px 0;
-  }
-
-  nav ul.active{
-    display:flex;
-  }
-
-  nav ul li{
-    margin:12px 0;
-  }
-
-  .hero h1{
-    font-size:30px;
-  }
-
-  .cards{
-    flex-direction:column;
-    align-items:center;
-  }
+  .menu-toggle{display:block;}
+  nav ul{display:none;flex-direction:column;background:#000;position:absolute;top:70px;width:100%;}
+  nav ul.active{display:flex;}
+  .hero h1{font-size:30px;}
 }
 
 </style>
@@ -309,14 +418,11 @@ RESPONSIVE (MOBILE)
 
 <header>
 <nav>
-
   <div class="logo-area">
     <img src="logo.png" alt="DriveRey Logo">
     <h1>DriveRey</h1>
   </div>
-
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
   <ul id="menu">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="3experiencia.html">Experiencia</a></li>
@@ -327,7 +433,6 @@ RESPONSIVE (MOBILE)
     <li><a href="2sobre-nosotros.html">Sobre Nosotros</a></li>
     <li><a href="4reseñas.html">Reseñas</a></li>
   </ul>
-
 </nav>
 </header>
 
@@ -349,7 +454,6 @@ RESPONSIVE (MOBILE)
 
 <section class="section">
   <h2>Cómo funciona la operación</h2>
-
   <div class="cards">
     <div class="card"><h3>Plan adjudicado</h3><p>El titular ya tiene derecho al vehículo.</p></div>
     <div class="card"><h3>Transferencia</h3><p>El plan puede transferirse legalmente.</p></div>
@@ -364,24 +468,139 @@ RESPONSIVE (MOBILE)
   <p>Alternativa financiera distinta a una compra tradicional.</p>
 </section>
 
+<section class="catalogo-adjudicados">
+  <h2 style="text-align:center;color:#60a5fa;margin-bottom:25px;">Catálogo de 0 km adjudicados</h2>
+
+  <div class="grid-adjudicados">
+
+    <div class="auto-adj">
+      <div class="carousel-adj">
+        <div class="carousel-track-adj">
+          <img src="https://images.unsplash.com/photo-1549921296-3cce9d08e204">
+          <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c4">
+        </div>
+        <button class="prev-adj">‹</button><button class="next-adj">›</button>
+      </div>
+      <div class="auto-info-adj">
+        <h3>Toyota Corolla</h3>
+        <div class="estado">Plan adjudicado</div>
+        <div class="ficha">Entrega coordinada · Cuotas pendientes</div>
+        <a href="https://wa.me/541123283606?text=Hola,%20vengo%20de%20la%20página%20DriveRey%20por%20el%20vehículo%20Toyota%20Corolla" target="_blank" class="btn-whatsapp-veh">Consultar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="auto-adj">
+      <div class="carousel-adj">
+        <div class="carousel-track-adj">
+          <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d">
+          <img src="https://images.unsplash.com/photo-1517940310602-26535839fe84">
+        </div>
+        <button class="prev-adj">‹</button><button class="next-adj">›</button>
+      </div>
+      <div class="auto-info-adj">
+        <h3>Volkswagen Amarok</h3>
+        <div class="estado">Adjudicado</div>
+        <div class="ficha">Pick up · Sin espera de sorteo</div>
+        <a href="https://wa.me/541123283606?text=Hola,%20vengo%20de%20la%20página%20DriveRey%20por%20el%20vehículo%20Volkswagen%20Amarok" target="_blank" class="btn-whatsapp-veh">Consultar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="auto-adj">
+      <div class="carousel-adj">
+        <div class="carousel-track-adj">
+          <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068">
+          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753">
+        </div>
+        <button class="prev-adj">‹</button><button class="next-adj">›</button>
+      </div>
+      <div class="auto-info-adj">
+        <h3>Toyota Hilux</h3>
+        <div class="estado">Plan activo</div>
+        <div class="ficha">4x4 · Entrega sujeta a condiciones</div>
+        <a href="https://wa.me/541123283606?text=Hola,%20vengo%20de%20la%20página%20DriveRey%20por%20el%20vehículo%20Toyota%20Hilux" target="_blank" class="btn-whatsapp-veh">Consultar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="auto-adj">
+      <div class="carousel-adj">
+        <div class="carousel-track-adj">
+          <img src="https://images.unsplash.com/photo-1549921296-3cce9d08e204">
+          <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c4">
+        </div>
+        <button class="prev-adj">‹</button><button class="next-adj">›</button>
+      </div>
+      <div class="auto-info-adj">
+        <h3>Peugeot 208</h3>
+        <div class="estado">Adjudicado por licitación</div>
+        <div class="ficha">Transferible · Sin entrega inmediata</div>
+        <a href="https://wa.me/541123283606?text=Hola,%20vengo%20de%20la%20página%20DriveRey%20por%20el%20vehículo%20Peugeot%20208" target="_blank" class="btn-whatsapp-veh">Consultar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="auto-adj">
+      <div class="carousel-adj">
+        <div class="carousel-track-adj">
+          <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d">
+          <img src="https://images.unsplash.com/photo-1517940310602-26535839fe84">
+        </div>
+        <button class="prev-adj">‹</button><button class="next-adj">›</button>
+      </div>
+      <div class="auto-info-adj">
+        <h3>Ford Ranger</h3>
+        <div class="estado">Plan adjudicado</div>
+        <div class="ficha">Entrega programada · Documentación ok</div>
+        <a href="https://wa.me/541123283606?text=Hola,%20vengo%20de%20la%20página%20DriveRey%20por%20el%20vehículo%20Ford%20Ranger" target="_blank" class="btn-whatsapp-veh">Consultar por WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section class="cta-section">
   <h2>¿Querés vender o comprar un adjudicado?</h2>
   <p>Analizamos tu caso y te asesoramos.</p>
-  <a href="https://wa.me/541123283606" class="btn-cita">🚗 Consultar por WhatsApp</a>
+  <a href="https://wa.me/541123283606?text=Hola,%20vengo%20de%20la%20página%20DriveRey%20y%20quiero%20consultar%20por%20un%20adjudicado" class="btn-cita" target="_blank">🚗 Consultar por WhatsApp</a>
 </section>
 
 <footer>
   <p>Buenos Aires · Intermediación privada de vehículos</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/541123283606">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/541123283606" target="_blank">WhatsApp</a>
 
 <script>
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
+
+document.querySelectorAll(".carousel-adj").forEach(c=>{
+  let t=c.querySelector(".carousel-track-adj"),i=0;
+  const slides=t.children.length;
+
+  c.querySelector(".next-adj").onclick=()=>{
+    i=(i+1)%slides;
+    t.style.transform=`translateX(-${i*100}%)`;
+    gtag('event','carousel_next',{page:'autos_0km_adjudicados'});
+  }
+
+  c.querySelector(".prev-adj").onclick=()=>{
+    i=(i-1+slides)%slides;
+    t.style.transform=`translateX(-${i*100}%)`;
+    gtag('event','carousel_prev',{page:'autos_0km_adjudicados'});
+  }
+
+  setInterval(()=>{
+    i=(i+1)%slides;
+    t.style.transform=`translateX(-${i*100}%)`;
+  },4500);
+});
+
+document.querySelectorAll('a[href*="wa.me"]').forEach(link=>{
+  link.addEventListener('click',()=>{
+    gtag('event','click_whatsapp',{page:'autos_0km_adjudicados',vehiculo:link.getAttribute('href')});
+  });
+});
 </script>
 
 </body>
 </html>
-
