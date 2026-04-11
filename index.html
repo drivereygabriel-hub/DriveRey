@@ -327,6 +327,214 @@ font-size:16px;
 
 }
 
+/* =====================
+SECCIÓN COMPRADORES
+===================== */
+
+.compradores-section{
+background:#0b1220;
+padding:90px 30px;
+text-align:center;
+}
+
+.compradores-section h2{
+color:#60a5fa;
+font-size:34px;
+margin-bottom:20px;
+}
+
+.compradores-text{
+max-width:850px;
+margin:0 auto;
+font-size:18px;
+line-height:1.6;
+opacity:0.95;
+}
+
+.compradores-cta{
+margin-top:35px;
+}
+
+.btn-comprar{
+display:inline-block;
+background:linear-gradient(45deg,#22c55e,#16a34a);
+color:white;
+padding:18px 45px;
+font-size:20px;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+transition:.3s;
+box-shadow:0 10px 30px rgba(34,197,94,0.4);
+}
+
+.btn-comprar:hover{
+background:linear-gradient(45deg,#16a34a,#15803d);
+transform:scale(1.05);
+}
+
+/* =====================
+SELECCIÓN DE INTENCIÓN
+===================== */
+
+.intent-section{
+background:#020617;
+padding:80px 30px;
+text-align:center;
+}
+
+.intent-section h2{
+color:#60a5fa;
+font-size:34px;
+margin-bottom:40px;
+}
+
+.intent-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+max-width:1100px;
+margin:0 auto;
+}
+
+.intent-card{
+background:#111827;
+padding:40px 30px;
+border-radius:14px;
+width:320px;
+box-shadow:0 10px 35px rgba(0,0,0,.6);
+transition:.4s;
+}
+
+.intent-card:hover{
+transform:translateY(-10px);
+}
+
+.intent-card h3{
+color:#60a5fa;
+font-size:22px;
+margin-bottom:15px;
+}
+
+.intent-card p{
+font-size:16px;
+line-height:1.6;
+opacity:.95;
+}
+
+.btn-intent{
+display:inline-block;
+margin-top:25px;
+padding:16px 35px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.btn-vender{
+background:#2563eb;
+}
+
+.btn-vender:hover{
+background:#1e40af;
+}
+
+.btn-comprar-intent{
+background:#22c55e;
+}
+
+.btn-comprar-intent:hover{
+background:#16a34a;
+}
+
+@media(max-width:768px){
+.intent-grid{
+flex-direction:column;
+gap:30px;
+}
+
+/* =====================
+SUB-HERO ACLARATORIO
+===================== */
+
+.sub-hero{
+background:#020617;
+padding:35px 20px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.sub-hero h2{
+color:#60a5fa;
+font-size:22px;
+margin-bottom:10px;
+}
+
+.sub-hero p{
+max-width:900px;
+margin:0 auto;
+font-size:16px;
+line-height:1.6;
+opacity:0.9;
+}
+
+}
+
+/* =====================
+SECCIÓN CONFIANZA
+===================== */
+
+.trust-section{
+background:#020617;
+padding:90px 30px;
+text-align:center;
+}
+
+.trust-section h2{
+color:#60a5fa;
+font-size:34px;
+margin-bottom:50px;
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+max-width:1100px;
+margin:0 auto;
+}
+
+.trust-item{
+background:#111827;
+padding:35px 25px;
+border-radius:14px;
+box-shadow:0 10px 35px rgba(0,0,0,.6);
+transition:.3s;
+}
+
+.trust-item:hover{
+transform:translateY(-8px);
+}
+
+.trust-item h3{
+color:#60a5fa;
+font-size:20px;
+margin-bottom:12px;
+}
+
+.trust-item p{
+font-size:16px;
+line-height:1.6;
+opacity:.95;
+}
+
+.trust-cta{
+margin-top:45px;
+}
+
 </style>
 
 <!-- GOOGLE ANALYTICS 4 -->
@@ -389,6 +597,89 @@ Sin dejar el auto en consignación y sin pagar absolutamente nada por adelantado
 
 </section>
 
+<!-- =====================
+SELECCIÓN DE INTENCIÓN
+===================== -->
+
+<section class="section intent-section">
+
+  <h2>¿Qué querés hacer hoy?</h2>
+
+  <div class="intent-grid">
+
+    <div class="intent-card intent-vender">
+      <h3>Quiero vender mi vehículo</h3>
+      <p>
+        Si sos propietario y querés vender tu auto de forma segura,
+        rápida y sin adelantos, te acompaño en todo el proceso.
+      </p>
+      <a href="#vender" class="btn-intent btn-vender">
+        Vender mi vehículo
+      </a>
+    </div>
+
+    <div class="intent-card intent-comprar">
+      <h3>Quiero comprar un vehículo</h3>
+      <p>
+        Si estás buscando comprar un auto o camioneta,
+        te asesoro para encontrar opciones reales y avanzar con seguridad.
+      </p>
+      <a href="#comprar" class="btn-intent btn-comprar-intent">
+        Comprar un vehículo
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section trust-section">
+
+  <h2>¿Por qué confiar en DriveRey?</h2>
+
+  <div class="trust-grid">
+
+    <div class="trust-item">
+      <h3>Intermediación directa</h3>
+      <p>
+        Operaciones entre particulares, sin estructuras pesadas
+        ni intermediarios innecesarios.
+      </p>
+    </div>
+
+    <div class="trust-item">
+      <h3>Sin adelantos</h3>
+      <p>
+        No cobro nada por adelantado ni trabajo con consignaciones.
+        El proceso es transparente desde el inicio.
+      </p>
+    </div>
+
+    <div class="trust-item">
+      <h3>Compradores filtrados</h3>
+      <p>
+        Coordinamos visitas solo con personas realmente interesadas,
+        evitando pérdidas de tiempo.
+      </p>
+    </div>
+
+    <div class="trust-item">
+      <h3>Acompañamiento real</h3>
+      <p>
+        Te acompaño en cada etapa: publicación, negociación y cierre.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="trust-cta">
+    <a href="#" class="btn-intent btn-vender trust-consulta">
+      Consultar sin compromiso
+    </a>
+  </div>
+
+</section>
+
 <section class="section">
 
 <h2>Intermediación profesional de vehículos</h2>
@@ -427,6 +718,27 @@ Desde la publicación del vehículo hasta la negociación final.
 </div>
 
 </div>
+
+</section>
+
+<!-- =====================
+SECCIÓN COMPRADORES
+===================== -->
+
+<section class="section compradores-section">
+
+  <h2>¿Querés comprar un vehículo?</h2>
+
+  <p class="compradores-text">
+    Si estás buscando comprar un auto o camioneta, te asesoro de forma personalizada.
+    Te ayudo a encontrar opciones reales, analizar precios y avanzar con seguridad.
+  </p>
+
+  <div class="compradores-cta">
+    <a href="#" class="btn-comprar">
+      Quiero asesoramiento para comprar
+    </a>
+  </div>
 
 </section>
 
@@ -487,6 +799,27 @@ document.addEventListener("DOMContentLoaded", function(){
 const telefono = "541123283606";
 
 const acciones = {
+intencionVender: {
+mensaje: "Hola, vengo desde la página de DriveRey y quiero vender mi vehículo.",
+evento: "intention_select_vender",
+seccion: "seleccion_intencion",
+intencion: "vender_vehiculo",
+tipo: "pre_contacto"
+},
+intencionComprar: {
+mensaje: "Hola, vengo desde la página de DriveRey y quiero comprar un vehículo.",
+evento: "intention_select_comprar",
+seccion: "seleccion_intencion",
+intencion: "comprar_vehiculo",
+tipo: "pre_contacto"
+},
+compradores: {
+mensaje: "Hola, vengo desde la página de DriveRey y quiero asesoramiento para comprar un vehículo.",
+evento: "cta_comprar_click",
+seccion: "compradores",
+intencion: "comprar_vehiculo",
+tipo: "asesoramiento_compra"
+},
 flotante: {
 mensaje: "Hola, vengo de la página de DriveRey y estoy buscando asesoramiento.",
 evento: "whatsapp_click",
@@ -509,6 +842,22 @@ intencion: "agendar_cita",
 tipo: "ofrecer_vehiculo"
 }
 };
+
+const btnIntentVender = document.querySelector(".btn-vender");
+if(btnIntentVender){
+btnIntentVender.addEventListener("click", function(e){
+e.preventDefault();
+enviarWhatsapp(acciones.intencionVender);
+});
+}
+
+const btnIntentComprar = document.querySelector(".btn-comprar-intent");
+if(btnIntentComprar){
+btnIntentComprar.addEventListener("click", function(e){
+e.preventDefault();
+enviarWhatsapp(acciones.intencionComprar);
+});
+}
 
 function enviarWhatsapp(config){
 gtag('event', config.evento, {
@@ -544,6 +893,36 @@ if(botonCtaFinal){
 botonCtaFinal.addEventListener("click", function(e){
 e.preventDefault();
 enviarWhatsapp(acciones.ctaFinal);
+});
+}
+
+const botonComprar = document.querySelector(".btn-comprar");
+if(botonComprar){
+botonComprar.addEventListener("click", function(e){
+e.preventDefault();
+enviarWhatsapp(acciones.compradores);
+});
+}
+
+const botonConsulta = document.querySelector(".trust-consulta");
+if(botonConsulta){
+botonConsulta.addEventListener("click", function(e){
+e.preventDefault();
+
+gtag('event','cta_consulta_suave',{
+page_name:'index',
+section:'confianza',
+intention:'consulta_sin_compromiso',
+query_type:'contacto_inicial'
+});
+
+window.open(
+"https://wa.me/" + telefono +
+"?text=" + encodeURIComponent(
+"Hola, vengo desde la página de DriveRey y quería hacer una consulta sin compromiso."
+),
+"_blank"
+);
 });
 }
 
