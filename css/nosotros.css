@@ -1,0 +1,173 @@
+/* =====================
+   PAGE BACKGROUND
+===================== */
+.nosotros-page{
+  color:#ffffff;
+
+  background:
+    radial-gradient(circle at 20% 15%, rgba(37,99,235,0.14), transparent 38%),
+    radial-gradient(circle at 80% 25%, rgba(96,165,250,0.10), transparent 42%),
+    radial-gradient(circle at 50% 90%, rgba(37,99,235,0.06), transparent 50%),
+    linear-gradient(180deg, #020617 0%, #000000 100%);
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* =====================
+   HERO
+===================== */
+.nosotros-hero{
+  padding:120px 20px 70px;
+  text-align:center;
+}
+
+.nosotros-hero h1{
+  font-size:44px;
+  margin-bottom:10px;
+}
+
+.nosotros-hero p{
+  max-width:800px;
+  margin:auto;
+  opacity:.85;
+  font-size:18px;
+}
+
+/* CTA */
+.hero-cta{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* =====================
+   SECCIONES GENERALES
+===================== */
+.nosotros-section{
+  max-width:1000px;
+  margin:auto;
+  padding:80px 20px;
+  text-align:center;
+}
+
+.nosotros-section h2{
+  font-size:32px;
+  color:#60a5fa;
+  margin-bottom:15px;
+}
+
+.nosotros-section p{
+  opacity:.85;
+  line-height:1.7;
+  margin-bottom:10px;
+}
+
+/* =====================
+   BLOQUE DESTACADO
+===================== */
+.highlight{
+  background:rgba(37,99,235,0.06);
+  border:1px solid rgba(96,165,250,0.2);
+  border-radius:16px;
+}
+
+/* =====================
+   VALUES
+===================== */
+.nosotros-values{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.nosotros-values h2{
+  font-size:32px;
+  margin-bottom:30px;
+}
+
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.value-card{
+  background:rgba(255,255,255,0.035);
+  border:1px solid rgba(255,255,255,0.06);
+  padding:24px;
+  border-radius:14px;
+  transition:.3s ease;
+}
+
+.value-card:hover{
+  transform:translateY(-6px);
+  border-color:#2563eb;
+}
+
+.value-card h3{
+  color:#60a5fa;
+  margin-bottom:6px;
+}
+
+/* =====================
+   DIFERENCIA
+===================== */
+.nosotros-diferencia{
+  padding:90px 20px;
+  text-align:center;
+}
+
+.diferencia-box{
+  max-width:900px;
+  margin:auto;
+  background:rgba(17,24,39,0.85);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:36px;
+}
+
+.diferencia-box p{
+  opacity:.88;
+  line-height:1.7;
+  margin-bottom:12px;
+}
+
+.diferencia-box ul{
+  list-style:none;
+  margin:20px 0;
+  padding:0;
+}
+
+.diferencia-box li{
+  margin:8px 0;
+  opacity:.95;
+}
+
+/* =====================
+   CTA FINAL
+===================== */
+.nosotros-cta{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.nosotros-cta h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.nosotros-cta p{
+  opacity:.85;
+  margin-bottom:22px;
+}
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}

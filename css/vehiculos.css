@@ -1,0 +1,366 @@
+/* =========================
+   VEHICULOS PAGE – GLOBAL
+========================= */
+
+.vehiculos-page {
+  color: #ffffff;
+
+  /* fondo premium global */
+  background:
+    radial-gradient(circle at 18% 12%, rgba(37, 99, 235, 0.14), transparent 40%),
+    radial-gradient(circle at 82% 28%, rgba(96, 165, 250, 0.10), transparent 45%),
+    radial-gradient(circle at 50% 92%, rgba(37, 99, 235, 0.06), transparent 50%),
+    linear-gradient(180deg, #020617 0%, #000000 100%);
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.vehiculos-hero {
+  padding: 120px 20px 70px;
+  text-align: center;
+}
+
+.vehiculos-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.vehiculos-hero p {
+  opacity: 0.85;
+  font-size: 18px;
+}
+
+/* =========================
+   HERO CTA
+========================= */
+
+.hero-cta {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.vehiculos-section {
+  padding: 80px 20px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vehiculos-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.vehiculos-section-header h2 {
+  font-size: 34px;
+}
+
+.vehiculos-section-header p {
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.vehiculos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.auto {
+  background: rgba(17, 24, 39, 0.9);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.auto:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.carousel {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  flex: 0 0 100%;
+}
+
+/* ARROWS */
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 6px;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* DOTS */
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 0;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #334155;
+}
+
+.dot.active {
+  background: #60a5fa;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.auto-info {
+  padding: 18px;
+}
+
+.auto-info h3 {
+  font-size: 18px;
+  color: #60a5fa;
+}
+
+.auto-info p {
+  opacity: 0.8;
+  margin: 6px 0;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.meta-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.meta-sep {
+  opacity: 0.4;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.acciones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 16px;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
+}
+
+.boton-secundario {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(96,165,250,0.5);
+  color: #60a5fa;
+  box-shadow: none;
+}
+
+.boton-secundario:hover {
+  background: rgba(96,165,250,0.08);
+}
+
+/* =========================
+   FICHA
+========================= */
+
+.ficha {
+  display: none;
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* =========================
+   TRUST SECTION
+========================= */
+
+.trust-section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.trust-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 24px;
+  transition: 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+}
+
+/* =========================
+   SELL SECTION – CIERRE
+========================= */
+
+.sell-section {
+  padding: 100px 20px;
+}
+
+.sell-box {
+  max-width: 820px;
+  margin: auto;
+
+  background:
+    radial-gradient(circle at top, rgba(37,99,235,0.15), transparent 60%),
+    rgba(2, 6, 23, 0.9);
+
+  border: 1px solid rgba(96,165,250,0.25);
+  border-radius: 18px;
+
+  padding: 40px 34px;
+  text-align: center;
+}
+
+.sell-box h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.sell-box p {
+  opacity: 0.85;
+  font-size: 16px;
+}
+
+.sell-highlights {
+  margin: 26px 0;
+  display: grid;
+  gap: 10px;
+  text-align: left;
+}
+
+.sell-item {
+  font-size: 14px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+}
+
+.sell-emphasis {
+  margin: 20px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #60a5fa;
+}
+
+/* =========================
+   WHATSAPP ICON
+========================= */
+
+.wa-icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .vehiculos-hero h1 {
+    font-size: 34px;
+  }
+
+  .sell-box h2 {
+    font-size: 26px;
+  }
+}

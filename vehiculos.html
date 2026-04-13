@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vehículos | DriveRey</title>
+
+  <meta name="description" content="Comprá o vendé tu vehículo con gestión profesional en Buenos Aires. Publicación seleccionada y asesoramiento personalizado." />
+
+  <link rel="icon" href="assets/icons/favicon.ico" />
+
+  <!-- Base + componentes -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <!-- Página -->
+  <link rel="stylesheet" href="css/vehiculos.css" />
+</head>
+
+<body class="vehiculos-page" data-wa="vehiculos">
+
+  <!-- NAVBAR -->
+  <div id="navbar-root"></div>
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <section class="vehiculos-hero">
+
+      <div class="vehiculos-hero-content">
+
+        <h1>Comprá o vendé tu vehículo sin complicaciones</h1>
+
+        <p>
+          Publicamos autos seleccionados y gestionamos ventas de forma profesional en Buenos Aires.
+        </p>
+
+        <div class="hero-cta">
+
+          <!-- BOTÓN WHATSAPP CON ICONO -->
+          <a class="boton js-whatsapp-comprar">
+            <i class="wa-icon"></i>
+            Quiero comprar
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         CONFIANZA
+    ========================== -->
+    <section class="trust-section">
+
+      <div class="trust-grid">
+
+        <div class="trust-card">
+          <h3>Gestión profesional</h3>
+          <p>Filtramos compradores y vendedores reales.</p>
+        </div>
+
+        <div class="trust-card">
+          <h3>Publicación premium</h3>
+          <p>Tu vehículo se presenta de forma optimizada para vender más rápido.</p>
+        </div>
+
+        <div class="trust-card">
+          <h3>Sin pérdida de tiempo</h3>
+          <p>Nosotros hacemos el filtro, vos recibís contactos reales.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         CATÁLOGO
+    ========================== -->
+    <section class="vehiculos-section">
+
+      <div class="vehiculos-section-header">
+        <h2>Vehículos disponibles</h2>
+        <p>Seleccionados y verificados por DriveRey</p>
+      </div>
+
+      <div id="vehiculos-grid" class="vehiculos-grid"></div>
+
+    </section>
+
+    <!-- =========================
+         VENDER (ABAJO DEL CATÁLOGO)
+    ========================== -->
+    <section id="vender" class="sell-section">
+
+  <div class="sell-box">
+
+    <h2>¿Querés vender tu vehículo?</h2>
+
+    <p>
+      Nosotros nos encargamos de todo el proceso para que vendas más rápido,
+      sin perder tiempo y sin tratar con curiosos.
+    </p>
+
+    <div class="sell-highlights">
+      <div class="sell-item">✔ Filtrado de compradores reales</div>
+      <div class="sell-item">✔ Publicación profesional del vehículo</div>
+      <div class="sell-item">✔ Gestión completa de consultas</div>
+      <div class="sell-item">✔ Cierre seguro sin intermediarios innecesarios</div>
+    </div>
+
+    <div class="sell-closing">
+      <p class="sell-emphasis">
+        Si tu auto está bien publicado, se vende. Nosotros hacemos que pase.
+      </p>
+    </div>
+
+    <a class="boton js-whatsapp-vender">
+      <i class="wa-icon"></i>
+      Coordinar venta ahora
+    </a>
+
+  </div>
+
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-root"></div>
+
+  <!-- JS -->
+  <script src="js/core.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/vehiculos.js"></script>
+
+  <a
+  class="whatsapp-float js-whatsapp-float"
+  aria-label="Contactar por WhatsApp"
+>
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M19.11 17.53c-.28-.14-1.64-.81-1.9-.9-.26-.09-.45-.14-.64.14-.19.28-.73.9-.89 1.09-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.25-1.37-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.33.42-.49.14-.16.19-.28.28-.46.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.12-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.49.07-.75.35-.26.28-1 1-1 2.44 0 1.44 1.03 2.83 1.17 3.02.14.19 2.02 3.09 4.91 4.33.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/>
+    <path fill="currentColor" d="M16 3C9.37 3 4 8.13 4 14.5c0 2.6.9 5.01 2.43 6.95L5 29l7.8-1.98c1.67.45 3.43.7 5.2.7 6.63 0 12-5.13 12-11.5S22.63 3 16 3zm0 21.5c-1.6 0-3.15-.27-4.6-.78l-.33-.1-4.63 1.18 1.23-4.36-.22-.36A8.9 8.9 0 0 1 7 14.5C7 9.81 11.03 6 16 6s9 3.81 9 8.5-4.03 8.5-9 8.5z"/>
+  </svg>
+</a>
+
+</body>
+
+</html>
